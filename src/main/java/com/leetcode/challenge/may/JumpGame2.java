@@ -37,7 +37,7 @@ public class JumpGame2 {
     0 <= nums[i] <= 105
 */
 
-     public int jump(int[] nums) {  // 솔직히 100% 이해 못함 ㅜ 나중에 DP 좀더 공부하고 다시 풀어보자
+     public int jump(int[] nums) {  // 솔직히 100% 이해 못함 ㅜ 나중에 DP 좀더 공부하고 다시 풀어보자1
 
         int currentIndex = -1;
         int nextIndex = 0;
