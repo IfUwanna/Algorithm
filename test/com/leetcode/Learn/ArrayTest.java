@@ -39,4 +39,11 @@ class ArrayTest {
     @Test
     void convertStringToCharArray() {
     }
+
+    @Test
+    void duplicateZeros(){
+       //array.duplicateZeros(new int[]{1,0,2,3,0,4,5,0});
+      // array.duplicateZeros(new int[]{1,0,2,3,0,0,5,0});
+       array.duplicateZeros(new int[]{8,4,5,0,0,0,0,7});
+    }
 }

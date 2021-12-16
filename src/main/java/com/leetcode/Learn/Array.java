@@ -1,7 +1,6 @@
 package com.leetcode.Learn;
 
 import java.util.Arrays;
-import java.util.stream.Stream;
 
 /**
  * packageName    : com.leetcode.Feature
@@ -160,14 +159,98 @@ public class Array {
     The main problem with not using additional memory is that we might override elements due to the zero duplication requirement of the problem statement. How do we get around that?
     Hide Hint #4
     If we had enough space available, we would be able to accommodate all the elements properly. The new length would be the original length of the array plus the number of zeros. Can we use this information somehow to solve the problem?
+   https://leetcode.com/problems/duplicate-zeros
     */
     public void duplicateZeros(int[] arr) {
 
+        int dupZeroCnt = 0; //복제 가능 0
+        boolean isLastZero = false; // 복제대상 array의 마지막 0여부
+        for(int i=0; i<arr.length-dupZeroCnt; i++){
+            if(arr[i] == 0 ){
+                if(i == arr.length-dupZeroCnt-1){// 0이 마지막에 오는경우는 더이상 복제 못함! 카운팅하지 않는다.
+                    isLastZero = true;
+                    break;
+                }
+                dupZeroCnt ++;
+            }
+        }
+        int lastIndex =  arr.length-dupZeroCnt-1; //실제로 쓸 Array length
+        if(isLastZero){ // 마지막이 0이면 더 복제가 안되기때문에 채워주고 맨마지막-1부터 시작
+            arr[arr.length-1] = 0;
+            lastIndex--;
+        }
+
+        //데이터를 복사하기 위해  끝에서부터채워 준다.
+        for(int i= lastIndex; i >= 0; i-- ){ // i 0까지 될떄까지 다 채워줌
+            if(arr[i] == 0){
+                arr[i+dupZeroCnt] = arr[i];
+                dupZeroCnt--;
+                arr[i+dupZeroCnt] = arr[i];
+            }else{
+                arr[i+dupZeroCnt] = arr[i];
+            }
+        }
+
+
+        //1. 추가 공간 사용
+//        int shiftCnt = 0;
+//        int[] resultArray = new int[arr.length];
+//        for(int i=0; i<arr.length; i++){
+//            if(i+shiftCnt < arr.length){ // 배열의 인덱스보다 작으면 insert
+//                resultArray[i+shiftCnt] = arr[i];
+//            }else{
+//                break;
+//            }
+//            if(arr[i]==0){
+//                shiftCnt++;  // 다음원소부터 적용
+//            }
+//        }
+//        arr = Arrays.copyOf(resultArray,resultArray.length);
+        for(int a : arr){
+            System.out.println(a);
+        }
     }
+    /*
+    Merge Sorted Array
 
+    You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
 
+    Merge nums1 and nums2 into a single array sorted in non-decreasing order.
 
+    The final sorted array should not be returned by the function, but instead be stored inside the array nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
 
+    Example 1:
+
+    Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+    Output: [1,2,2,3,5,6]
+    Explanation: The arrays we are merging are [1,2,3] and [2,5,6].
+    The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
+            Example 2:
+
+    Input: nums1 = [1], m = 1, nums2 = [], n = 0
+    Output: [1]
+    Explanation: The arrays we are merging are [1] and [].
+    The result of the merge is [1].
+    Example 3:
+
+    Input: nums1 = [0], m = 0, nums2 = [1], n = 1
+    Output: [1]
+    Explanation: The arrays we are merging are [] and [1].
+    The result of the merge is [1].
+    Note that because m = 0, there are no elements in nums1. The 0 is only there to ensure the merge result can fit in nums1.
+
+    Constraints:
+    nums1.length == m + n
+    nums2.length == n
+    0 <= m, n <= 200
+    1 <= m + n <= 200
+    -109 <= nums1[i], nums2[j] <= 109
+
+    Follow up: Can you come up with an algorithm that runs in O(m + n) time?
+    */
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+
+    }
 
 // 양수 > 음수 변환  abs 절대값 리턴
 // Math.abs(negative)
