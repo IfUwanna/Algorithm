@@ -57,15 +57,15 @@ Arrays.sort(stringArr);		//A B C D E
 
 /** Arrays.copyOf(intArr, 3); */
 //남는건 기본값으로 채움! Reference Type은 null
-//Arrays.copyOf(intArr,3);		// int[3] 1 2 3
-//Arrays.copyOf(intArr,10);		// 1 2 3 4 5 0 0 0 0 0 
-//Arrays.copyOf(stringArr,10);	// A B C D E null null null null null 
+//Arrays.copyOf(intArr,3);		// int[3] {1,2,3}
+//Arrays.copyOf(intArr,10);		// int[10] {1,2,3,4,5,0,0,0,0,0}
+//Arrays.copyOf(stringArr,10);	// String[10] {A,B,C,D,E,null,null,null,null,null}
 
 /** 
  * Arrays.copyOfRange(originalArray, from, to);
-  - arr[from]~arr[to-1]의 까지 잘라서 복제
-  - 길이 to-from 의 배열이 생성되고 남는건 기본값으로 채움!
-  -  
+ * static <T> T[] copyOfRange(T[] original, int from, int to)
+  * arr[from]~arr[to-1]의 까지 잘라서 복제
+  * 길이 to-from 의 배열이 생성되고 남는건 기본값으로 채움!
  * */
 
 Arrays.copyOfRange(intArr,0,3);  // 1 2 3 
