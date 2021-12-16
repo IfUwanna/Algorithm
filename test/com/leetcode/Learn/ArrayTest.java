@@ -23,4 +23,20 @@ class ArrayTest {
     void findMaxConsecutiveOnes() {
         assertEquals(3,array.findMaxConsecutiveOnes(new int[]{1,1,0,1,1,1}));
     }
+
+    @Test
+    void testFindMaxConsecutiveOnes() {
+    }
+
+    @Test
+    void findNumbers() {
+    }
+
+    @Test
+    void sortedSquares() {
+    }
+
+    @Test
+    void convertStringToCharArray() {
+    }
 }
