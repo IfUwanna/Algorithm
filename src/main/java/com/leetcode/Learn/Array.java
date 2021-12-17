@@ -15,7 +15,7 @@ import java.util.Arrays;
  */
 public class Array {
 
-    /*
+    /**
     *  Max Consecutive Ones
     *
     * Given a binary array nums, return the maximum number of consecutive 1's in the array.
@@ -44,7 +44,7 @@ public class Array {
         }
         return maxCnt;
     }
-    /*
+    /**
     Find Numbers with Even Number of Digits
     Given an array nums of integers, return how many of them contain an even number of digits.
 
@@ -84,7 +84,7 @@ public class Array {
         }
         return cnt;
     }
-    /*
+    /**
     Squares of a Sorted Array
 
     Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
@@ -131,7 +131,7 @@ public class Array {
         }
         return resultArray;
     }
-    /*
+    /**
     Duplicate Zeros
 
     Solution
@@ -210,7 +210,7 @@ public class Array {
             System.out.println(a);
         }
     }
-    /*
+    /**
     Merge Sorted Array
 
     You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
