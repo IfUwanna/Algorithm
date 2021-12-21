@@ -16,7 +16,7 @@ import java.util.Arrays;
 public class Array {
 
     /**
-    *  Max Consecutive Ones
+    *  Max Consecutive Ones 1이 최대로 연속되는 숫자 찾기!
     *
     * Given a binary array nums, return the maximum number of consecutive 1's in the array.
     * Input: nums = [1,1,0,1,1,1]
@@ -45,7 +45,7 @@ public class Array {
         return maxCnt;
     }
     /**
-    Find Numbers with Even Number of Digits
+    Find Numbers with Even Number of Digits  짝수 자리 숫자 찾기!
     Given an array nums of integers, return how many of them contain an even number of digits.
 
     Example 1:
@@ -211,33 +211,32 @@ public class Array {
         }
     }
     /**
-    Merge Sorted Array
+     Merge Sorted Array
 
-    You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
+     You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
 
-    Merge nums1 and nums2 into a single array sorted in non-decreasing order.
+     Merge nums1 and nums2 into a single array sorted in non-decreasing order.
 
-    The final sorted array should not be returned by the function, but instead be stored inside the array nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
+     The final sorted array should not be returned by the function, but instead be stored inside the array nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
 
-    Example 1:
+     Example 1:
+     Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+     Output: [1,2,2,3,5,6]
+     Explanation: The arrays we are merging are [1,2,3] and [2,5,6].
+     The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
 
-    Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
-    Output: [1,2,2,3,5,6]
-    Explanation: The arrays we are merging are [1,2,3] and [2,5,6].
-    The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
-            Example 2:
+     Example 2:
+     Input: nums1 = [1], m = 1, nums2 = [], n = 0
+     Output: [1]
+     Explanation: The arrays we are merging are [1] and [].
+     The result of the merge is [1].
 
-    Input: nums1 = [1], m = 1, nums2 = [], n = 0
-    Output: [1]
-    Explanation: The arrays we are merging are [1] and [].
-    The result of the merge is [1].
-    Example 3:
-
-    Input: nums1 = [0], m = 0, nums2 = [1], n = 1
-    Output: [1]
-    Explanation: The arrays we are merging are [] and [1].
-    The result of the merge is [1].
-    Note that because m = 0, there are no elements in nums1. The 0 is only there to ensure the merge result can fit in nums1.
+     Example 3:
+     Input: nums1 = [0], m = 0, nums2 = [1], n = 1
+     Output: [1]
+     Explanation: The arrays we are merging are [] and [1].
+     The result of the merge is [1].
+     Note that because m = 0, there are no elements in nums1. The 0 is only there to ensure the merge result can fit in nums1.
 
     Constraints:
     nums1.length == m + n
@@ -247,33 +246,239 @@ public class Array {
     -109 <= nums1[i], nums2[j] <= 109
 
     Follow up: Can you come up with an algorithm that runs in O(m + n) time?
+     Hide Hint #1
+     You can easily solve this problem if you simply think about two elements at a time rather than two arrays. We know that each of the individual arrays is sorted. What we don't know is how they will intertwine. Can we take a local decision and arrive at an optimal solution?
+     Hide Hint #2
+     If you simply consider one element each at a time from the two arrays and make a decision and proceed accordingly, you will arrive at the optimal solution.
     */
     public void merge(int[] nums1, int m, int[] nums2, int n) {
 
+        //비교해가면서 끝에서부터 큰 값으로 채워주자
+        int nums1Index = m - 1;
+        int nums2Index = n - 1;
+
+        for (int i = nums1.length - 1; i >= 0; i--) {
+            if (nums1Index >= 0 && nums2Index >= 0) {
+                if (nums1[nums1Index] >= nums2[nums2Index]) { //nums1의 마지막 숫자가 크거나 nums2Index-1 이라 더이상 넣을게 없으면
+                    nums1[i] = nums1[nums1Index];
+                    nums1Index--;
+                } else {  //nums2의 마지막 숫자가 큼
+                    nums1[i] = nums2[nums2Index];
+                    nums2Index--;
+                }
+            } else {
+                break;
+            }
+        }
+        if (nums2Index >= 0) {//배열2가 남았을 경우는 나머지값을 채워준다.
+            for (int i = 0; i <= nums2Index; i++) {
+                nums1[i] = nums2[i];
+            }
+        }
+
+        //        int[] result = new int[nums1.length];
+//        for(int i=0; i<m; i++){
+//            result[i] = nums1[i];
+//        }
+//        for(int j=0; j<n; j++){
+//            result[j+m] = nums2[j];
+//        }
+//        Arrays.sort(result);
+//        nums1 = Arrays.copyOf(result,nums1.length);
     }
 
-// 양수 > 음수 변환  abs 절대값 리턴
-// Math.abs(negative)
-    // 배열은[] 이걸로 접근. length 이거다!
-    // class는 length() API임
 
-   // Convert a String to Character array in Java
-    public void convertStringToCharArray(String str){
 
-        // Creating array of string length
-        char[] ch = new char[str.length()];
 
-        // Copy character by character into array
-        for (int i = 0; i < str.length(); i++) {
-            ch[i] = str.charAt(i);
-        }
-        //char[] ch = str.toCharArray();
 
-        // Printing content of array
-        for (char c : ch) {
-            System.out.println(c);
-        }
+
+    /**
+    27. Remove Element
+
+    Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The relative order of the elements may be changed.
+
+    Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the first part of the array nums. More formally, if there are k elements after removing the duplicates, then the first k elements of nums should hold the final result. It does not matter what you leave beyond the first k elements.
+
+    Return k after placing the final result in the first k slots of nums.
+
+    Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
+
+    Custom Judge:
+
+    The judge will test your solution with the following code:
+
+    int[] nums = [...]; // Input array
+    int val = ...; // Value to remove
+    int[] expectedNums = [...]; // The expected answer with correct length.
+    // It is sorted with no values equaling val.
+
+    int k = removeElement(nums, val); // Calls your implementation
+
+    assert k == expectedNums.length;
+    sort(nums, 0, k); // Sort the first k elements of nums
+    for (int i = 0; i < actualLength; i++) {
+        assert nums[i] == expectedNums[i];
     }
+    If all assertions pass, then your solution will be accepted.
+
+
+     Example 1:
+
+    Input: nums = [3,2,2,3], val = 3
+    Output: 2, nums = [2,2,_,_]
+    Explanation: Your function should return k = 2, with the first two elements of nums being 2.
+    It does not matter what you leave beyond the returned k (hence they are underscores).
+
+    Example 2:
+    Input: nums = [0,1,2,2,3,0,4,2], val = 2
+    Output: 5, nums = [0,1,4,0,3,_,_,_]
+    Explanation: Your function should return k = 5, with the first five elements of nums containing 0, 0, 1, 3, and 4.
+    Note that the five elements can be returned in any order.
+    It does not matter what you leave beyond the returned k (hence they are underscores).
+
+
+    Constraints:
+            0 <= nums.length <= 100
+            0 <= nums[i] <= 50
+            0 <= val <= 100
+     https://leetcode.com/problems/remove-element/
+*/
+    public int removeElement(int[] nums, int val) {
+
+        int valCnt = 0;
+        for(int i=0; i<nums.length; i++) {
+            if (nums[i] == val) {
+                valCnt++;
+            }else{
+                nums[i-valCnt] = nums[i];
+            }
+        }
+
+        return nums.length-valCnt;
+
+
+        //이것도 정답
+//        int i = 0;
+//        for (int j = 0; j < nums.length; j++) {
+//            if (nums[j] != val) {
+//                nums[i] = nums[j];
+//                i++;
+//            }
+//        }
+//        return i;
+    }
+
+/**
+ *
+ *    26. Remove Duplicates from Sorted Array
+    Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.
+
+    Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the first part of the array nums. More formally, if there are k elements after removing the duplicates, then the first k elements of nums should hold the final result. It does not matter what you leave beyond the first k elements.
+
+    Return k after placing the final result in the first k slots of nums.
+
+    Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
+
+    Custom Judge:
+
+    The judge will test your solution with the following code:
+
+    int[] nums = [...]; // Input array
+    int[] expectedNums = [...]; // The expected answer with correct length
+
+    int k = removeDuplicates(nums); // Calls your implementation
+
+    assert k == expectedNums.length;
+    for (int i = 0; i < k; i++) {
+        assert nums[i] == expectedNums[i];
+    }
+    If all assertions pass, then your solution will be accepted.
+
+
+    Example 1:
+    Input: nums = [1,1,2]
+    Output: 2, nums = [1,2,_]
+    Explanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
+    It does not matter what you leave beyond the returned k (hence they are underscores).
+
+    Example 2:
+    Input: nums = [0,0,1,1,1,2,2,3,3,4]
+    Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
+    Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
+    It does not matter what you leave beyond the returned k (hence they are underscores).
+
+
+    Constraints:
+    0 <= nums.length <= 3 * 104
+    -100 <= nums[i] <= 100
+    nums is sorted in non-decreasing order.
+    https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+ */
+    public int removeDuplicates(int[] nums) {
+
+        if(nums.length==0) return 0;
+
+        int index = 0; //현재 채우고 있는 배열의 인덱스
+        for(int i = 1; i<nums.length; i++) { // 요소 검색
+            if (nums[index] != nums[i]) { //이전 값과 다른경우 중복 끝났으니 채워줌
+                index++; //포인터 이동
+                nums[index] = nums[i];
+            }
+        }
+        return index+1;
+    }
+    /**
+    * Check If N and Its Double Exist
+    Given an array arr of integers, check if there exists two integers N and M such that N is the double of M ( i.e. N = 2 * M).
+
+    More formally check if there exists two indices i and j such that :
+
+    i != j
+    0 <= i, j < arr.length
+    arr[i] == 2 * arr[j]
+
+
+    Example 1:
+
+    Input: arr = [10,2,5,3]
+    Output: true
+    Explanation: N = 10 is the double of M = 5,that is, 10 = 2 * 5.
+    Example 2:
+
+    Input: arr = [7,1,14,11]
+    Output: true
+    Explanation: N = 14 is the double of M = 7,that is, 14 = 2 * 7.
+    Example 3:
+
+    Input: arr = [3,1,7,11]
+    Output: false
+    Explanation: In this case does not exist N and M, such that N = 2 * M.
+
+
+    Constraints:
+
+    2 <= arr.length <= 500
+    -10^3 <= arr[i] <= 10^3
+    * */
+    public boolean checkIfExist(int[] arr) {
+        if(arr==null || arr.length <= 1){ return false;}
+
+        for(int i=0; i<arr.length;i++){
+
+            for(int j=i+1; j<arr.length; j++){ // 다음것 부터 체크
+                if(arr[i] == arr[j]*2 || arr[i]*2 == arr[j]){   // 각각 *2 한 값과 같은 케이스가 있는지. 이러면 앞에 건 검증이 뒤에서 뒤부터 돌리면됨
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+
+
+
+
+
 
 
 }
