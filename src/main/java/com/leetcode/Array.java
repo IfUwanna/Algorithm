@@ -1,5 +1,7 @@
 package com.leetcode;
 
+import java.util.Arrays;
+
 /**
  * packageName    : com.leetcode.Feature
  * fileName       : Array
@@ -14,7 +16,7 @@ package com.leetcode;
 public class Array {
 
     /**
-    *  Max Consecutive Ones 1이 최대로 연속되는 숫자 찾기!
+    *  485.Max Consecutive One 1이 최대로 연속되는 숫자 찾기!
     *
     * Given a binary array nums, return the maximum number of consecutive 1's in the array.
     * Input: nums = [1,1,0,1,1,1]
@@ -22,7 +24,7 @@ public class Array {
     *
     * Input: nums = [1,0,1,1,0,1]
     * Output: 2
-    * https://leetcode.com/explore/learn/card/fun-with-arrays/521/introduction/3238/
+    * https://leetcode.com/problems/max-consecutive-ones/
     *
     * */
     public int findMaxConsecutiveOnes(int[] nums) {
@@ -43,7 +45,7 @@ public class Array {
         return maxCnt;
     }
     /**
-    Find Numbers with Even Number of Digits  짝수 자리 숫자 찾기!
+     * 1295.Find Numbers with Even Number of Digits  짝수 자리 숫자 찾기!
     Given an array nums of integers, return how many of them contain an even number of digits.
 
     Example 1:
@@ -67,7 +69,7 @@ public class Array {
     Constraints:
             1 <= nums.length <= 500
             1 <= nums[i] <= 105
-    https://leetcode.com/explore/learn/card/fun-with-arrays/521/introduction/3237/
+     https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
  */
     public int findNumbers(int[] nums) {
 
@@ -83,7 +85,7 @@ public class Array {
         return cnt;
     }
     /**
-    Squares of a Sorted Array
+    977. Squares of a Sorted Array
 
     Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
 
@@ -103,6 +105,7 @@ public class Array {
     nums is sorted in non-decreasing order.
 
     Follow up: Squaring each element and sorting the new array is very trivial, could you find an O(n) solution using a different approach?
+    https://leetcode.com/problems/squares-of-a-sorted-array/
     */
     public int[] sortedSquares(int[] nums) {
 
@@ -130,7 +133,8 @@ public class Array {
         return resultArray;
     }
     /**
-    Duplicate Zeros
+    1089.Duplicate Zeros
+    https://leetcode.com/problems/duplicate-zeros/
 
     Solution
     Given a fixed-length integer array arr, duplicate each occurrence of zero, shifting the remaining elements to the right.
@@ -157,7 +161,7 @@ public class Array {
     The main problem with not using additional memory is that we might override elements due to the zero duplication requirement of the problem statement. How do we get around that?
     Hide Hint #4
     If we had enough space available, we would be able to accommodate all the elements properly. The new length would be the original length of the array plus the number of zeros. Can we use this information somehow to solve the problem?
-   https://leetcode.com/problems/duplicate-zeros
+    https://leetcode.com/problems/duplicate-zeros
     */
     public void duplicateZeros(int[] arr) {
 
@@ -209,7 +213,8 @@ public class Array {
         }
     }
     /**
-     Merge Sorted Array
+     88. Merge Sorted Array
+     https://leetcode.com/problems/merge-sorted-array/
 
      You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
 
@@ -284,14 +289,7 @@ public class Array {
 //        Arrays.sort(result);
 //        nums1 = Arrays.copyOf(result,nums1.length);
     }
-
-
-
-
-
-
-    /**
-    27. Remove Element
+    /** 27. Remove Element
 
     Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The relative order of the elements may be changed.
 
@@ -365,10 +363,7 @@ public class Array {
 //        }
 //        return i;
     }
-
-/**
- *
- *    26. Remove Duplicates from Sorted Array
+    /** 26. Remove Duplicates from Sorted Array
     Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.
 
     Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the first part of the array nums. More formally, if there are k elements after removing the duplicates, then the first k elements of nums should hold the final result. It does not matter what you leave beyond the first k elements.
@@ -426,7 +421,8 @@ public class Array {
         return index+1;
     }
     /**
-    * Check If N and Its Double Exist
+    * 1346. Check If N and Its Double Exist
+    https://leetcode.com/problems/check-if-n-and-its-double-exist/
     Given an array arr of integers, check if there exists two integers N and M such that N is the double of M ( i.e. N = 2 * M).
 
     More formally check if there exists two indices i and j such that :
@@ -462,7 +458,6 @@ public class Array {
         if(arr==null || arr.length <= 1){ return false;}
 
         for(int i=0; i<arr.length;i++){
-
             for(int j=i+1; j<arr.length; j++){ // 다음것 부터 체크
                 if(arr[i] == arr[j]*2 || arr[i]*2 == arr[j]){   // 각각 *2 한 값과 같은 케이스가 있는지. 이러면 앞에 건 검증이 뒤에서 뒤부터 돌리면됨
                     return true;
@@ -471,12 +466,168 @@ public class Array {
         }
         return false;
     }
+    /** 941. Valid Mountain Array
+     * Given an array of integers arr, return true if and only if it is a valid mountain array.
+     Recall that arr is a mountain array if and only if:
+     arr.length >= 3
+     There exists some i with 0 < i < arr.length - 1 such that:
+     arr[0] < arr[1] < ... < arr[i - 1] < arr[i]
+     arr[i] > arr[i + 1] > ... > arr[arr.length - 1]
+
+     Example 1:
+     Input: arr = [2,1]
+     Output: false
+
+     Example 2:
+     Input: arr = [3,5,5]
+     Output: false
+
+     Example 3:
+     Input: arr = [0,3,2,1]
+     Output: true
+
+     Constraints:
+     1 <= arr.length <= 104
+     0 <= arr[i] <= 104
+
+     https://leetcode.com/problems/valid-mountain-array/
+     * @return
+     */
+    public boolean validMountainArray (int[] arr) {
+
+        if (arr == null || arr.length < 3) {
+            return false;
+        }
+        boolean isAsc = true;    //상승여부
+        for (int i = 1; i < arr.length; i++) {
+            if (isAsc) {
+                if (arr[i - 1] > arr[i]) {
+                    if (i == 1) { // 처음부터 하강이면 탈락
+                        return false;
+                    } else {
+                        isAsc = false; // 하강 전환
+                    }
+                } else if (arr[i - 1] == arr[i]) { // 상승때 같은 경우 false
+                    return false;
+                }
+            } else { //하강
+                if (arr[i - 1] <= arr[i]) { // 하강시 뒷숫자가 크거나 같으면 false
+                    return false;
+                }
+            }
+        }
+        if (isAsc) {  //하강없이 끝나면 산이 아니니 false
+            return false;
+        } else {
+            return true;
+        }
+    }
+    /**  1299. Replace Elements with Greatest Element on Right Side
+    Given an array arr, replace every element in that array with the greatest element among the elements to its right, and replace the last element with -1.
+    After doing so, return the array.
+
+    Example 1:
+    Input: arr = [17,18,5,4,6,1]
+    Output: [18,6,6,6,1,-1]
+    Explanation:
+    - index 0 --> the greatest element to the right of index 0 is index 1 (18).
+    - index 1 --> the greatest element to the right of index 1 is index 4 (6).
+    - index 2 --> the greatest element to the right of index 2 is index 4 (6).
+    - index 3 --> the greatest element to the right of index 3 is index 4 (6).
+    - index 4 --> the greatest element to the right of index 4 is index 5 (1).
+    - index 5 --> there are no elements to the right of index 5, so we put -1.
+    Example 2:
+    Input: arr = [400]
+    Output: [-1]
+    Explanation: There are no elements to the right of index 0.
+
+
+    Constraints:
+    1 <= arr.length <= 104
+    1 <= arr[i] <= 105
+    https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/
+    */
+    public int[] replaceElements(int[] arr) {
+
+            if( arr.length < 2 ){ // edge case
+                arr[0] = -1;
+                return arr;
+            }
+
+            int max = -1;
+            int curVal = 0;
+            for (int i = arr.length-1; i >=0 ; i--) { // 오른쪽부터 최대값을 기억하고 넣어주면 최대값 찾는걸 반복 할 필요가 없다.
+                curVal = arr[i];
+                arr[i] = max;
+                max = Math.max(curVal,max);
+            }
+            return arr;
+
+/*            int index = 0; //결과 인덱스
+            for (int i = 0; i < arr.length-2 ; i++) { //마지막 2개 빼고 반복해서 채워넣음
+
+                int max = arr[i+1];
+                for (int j = i+1; j < arr.length-1; j++) {  //현재 인덱스+1 부터 가장 큰 값 찾기
+                    max = Math.max(max,arr[j+1]);
+                }
+                arr[index++] = max; //최대값 넣고 index++
+                //이렇게 마지막두개 요소 제외하고 다 세팅해준다.
+            }
+            //마지막 값 세팅
+            arr[arr.length-2] = arr[arr.length-1]; // 마지막 index-1 에는 기존 마지막 요소의 값
+            arr[arr.length-1] = -1; // 맨 마지막은 무조건 -1
+
+            return arr;*/
+
+}
+    /** 283. Move Zeroes
+
+    Solution
+    Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+
+    Note that you must do this in-place without making a copy of the array.
+
+    Example 1:
+    Input: nums = [0,1,0,3,12]
+    Output: [1,3,12,0,0]
+
+    Example 2:
+    Input: nums = [0]
+    Output: [0]
+
+    Constraints:
+    1 <= nums.length <= 104
+    -231 <= nums[i] <= 231 - 1
+
+    Follow up: Could you minimize the total number of operations done?*/
+    public void moveZeroes(int[] nums) {
+
+        int index = 0; // 쓰고있는  인덱스
+        int zeroCnt = 0; // 0 개수
+        for (int i = 0; i < nums.length; i++) {
+
+            if (nums[i] == 0){
+                zeroCnt++;
+            }else{
+                nums[index] = nums[i]; //현재 인덱스에 쓰고 하나 이동
+                //오름차순 정렬 위해 비교해서 swap
+//                if( index!=0 && nums[index-1] > nums[index]){
+//                    int temp = nums[index-1];
+//                    nums[index-1] = nums[index];
+//                    nums[index] = temp; // swap
+//                }
+                index++;
+            }
+        }
+
+        //Arrays.fill(nums,nums.length-zeroCnt,nums.length,0);
+        for (int i = nums.length-zeroCnt; i < nums.length ; i++) {
+            nums[i] = 0;
+        }
 
 
 
-
-
-
+    }
 
 
 }
