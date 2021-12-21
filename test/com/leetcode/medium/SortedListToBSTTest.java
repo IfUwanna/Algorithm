@@ -1,10 +1,10 @@
-package com.leetcode.challenge.may;
+package com.leetcode.medium;
 
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * packageName    : com.leetcode.challenge.may

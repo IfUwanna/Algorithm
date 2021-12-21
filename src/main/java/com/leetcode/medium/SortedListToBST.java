@@ -1,4 +1,4 @@
-package com.leetcode.challenge.may;
+package com.leetcode.medium;
 
 /**
  * packageName    : com.leetcode.challenge.may

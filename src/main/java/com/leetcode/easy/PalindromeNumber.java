@@ -1,4 +1,4 @@
-package com.leetcode.challenge.easy;
+package com.leetcode.easy;
 
 /**
  * packageName    : com.leetcode.challenge.easy

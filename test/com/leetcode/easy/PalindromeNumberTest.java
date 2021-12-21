@@ -1,6 +1,6 @@
-package com.leetcode.challenge.easy;
+package com.leetcode.easy;
 
-import com.leetcode.challenge.march.CoinChange;
+import com.leetcode.easy.PalindromeNumber;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,8 +1,7 @@
-package com.leetcode.challenge.march;
+package com.leetcode.medium;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**

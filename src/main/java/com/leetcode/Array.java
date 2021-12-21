@@ -1,6 +1,4 @@
-package com.leetcode.Learn;
-
-import java.util.Arrays;
+package com.leetcode;
 
 /**
  * packageName    : com.leetcode.Feature

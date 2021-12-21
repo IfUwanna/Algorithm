@@ -1,5 +1,6 @@
-package com.leetcode.Learn;
+package com.leetcode.learn;
 
+import com.leetcode.Array;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

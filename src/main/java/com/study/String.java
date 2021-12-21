@@ -12,9 +12,17 @@ package com.study;
  * 2021/12/21        Jihun Park       최초 생성
  */
 public class String {
+
+
     // 배열은[] 이걸로 접근. length 이거다!
     // class는 length() API임{
-    public void convertStringToCharArray(java.lang.String str){
+    /**
+     * methodName : stringToCharArray
+     * author : Jihun Park
+     * description :
+     * @param str
+     */
+    public void stringToCharArray(java.lang.String str){
 
         // Creating array of string length
         char[] ch = new char[str.length()];
