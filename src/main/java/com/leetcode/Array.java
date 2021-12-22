@@ -1,6 +1,8 @@
 package com.leetcode;
 
-import java.util.Arrays;
+import java.util.*;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 /**
  * packageName    : com.leetcode.Feature
@@ -16,7 +18,7 @@ import java.util.Arrays;
 public class Array {
 
     /**
-    *  485.Max Consecutive One 1이 최대로 연속되는 숫자 찾기!
+     * 485.Max Consecutive One 1이 최대로 연속되는 숫자 찾기!
     *
     * Given a binary array nums, return the maximum number of consecutive 1's in the array.
     * Input: nums = [1,1,0,1,1,1]
@@ -84,8 +86,7 @@ public class Array {
         }
         return cnt;
     }
-    /**
-    977. Squares of a Sorted Array
+    /** 977. Squares of a Sorted Array
 
     Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
 
@@ -133,7 +134,7 @@ public class Array {
         return resultArray;
     }
     /**
-    1089.Duplicate Zeros
+     * 1089.Duplicate Zeros
     https://leetcode.com/problems/duplicate-zeros/
 
     Solution
@@ -213,7 +214,7 @@ public class Array {
         }
     }
     /**
-     88. Merge Sorted Array
+     * 88. Merge Sorted Array
      https://leetcode.com/problems/merge-sorted-array/
 
      You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
@@ -341,27 +342,31 @@ public class Array {
 */
     public int removeElement(int[] nums, int val) {
 
-        int valCnt = 0;
-        for(int i=0; i<nums.length; i++) {
-            if (nums[i] == val) {
-                valCnt++;
-            }else{
-                nums[i-valCnt] = nums[i];
+        //edge case
+        if(nums.length < 1){return 0;}
+
+        int index = 0; //결과 커서
+        for(int i=0; i<nums.length; i++){
+            if(val != nums[i]){
+                nums[index++] = nums[i];
             }
         }
+        return index;
 
-        return nums.length-valCnt;
 
-
-        //이것도 정답
-//        int i = 0;
-//        for (int j = 0; j < nums.length; j++) {
-//            if (nums[j] != val) {
-//                nums[i] = nums[j];
-//                i++;
+//        int valCnt = 0;
+//        for(int i=0; i<nums.length; i++) {
+//            if (nums[i] == val) {
+//                valCnt++;
+//            }else{
+//                nums[i-valCnt] = nums[i];
 //            }
 //        }
-//        return i;
+//
+//        return nums.length-valCnt;
+
+
+
     }
     /** 26. Remove Duplicates from Sorted Array
     Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.
@@ -522,7 +527,8 @@ public class Array {
             return true;
         }
     }
-    /**  1299. Replace Elements with Greatest Element on Right Side
+    /**
+     * 1299. Replace Elements with Greatest Element on Right Side
     Given an array arr, replace every element in that array with the greatest element among the elements to its right, and replace the last element with -1.
     After doing so, return the array.
 
@@ -624,10 +630,206 @@ public class Array {
         for (int i = nums.length-zeroCnt; i < nums.length ; i++) {
             nums[i] = 0;
         }
+    }
+    /**
+     * 905.sort Array By Parity
+    https://leetcode.com/problems/sort-array-by-parity/
+    짝수를 정렬 상관없이 왼쪽으로, 홀수를 모두 오른쪽으로
+    Solution
+    Given an integer array nums, move all the even integers at the beginning of the array followed by all the odd integers.
 
+    Return any array that satisfies this condition.
 
+    Example 1:
+    Input: nums = [3,1,2,4]
+    Output: [2,4,3,1]
+    Explanation: The outputs [4,2,3,1], [2,4,1,3], and [4,2,1,3] would also be accepted.
+
+    Example 2:
+    Input: nums = [0]
+    Output: [0]
+
+    Constraints:
+    1 <= nums.length <= 5000
+    0 <= nums[i] <= 5000*/
+    public int[] sortArrayByParity(int[] nums) {
+
+        if(nums.length<2){return nums;} //edge case
+
+        //1. inplace operation 퀵정렬
+        int index = 0;
+
+        for (int i = 0; i < nums.length ; i++) {
+            if(nums[i]%2 == 0){
+                //swap
+                int temp = nums[index];
+                nums[index++] = nums[i];
+                nums[i] = temp;
+            }
+        }
+
+    /*      //2. 추가 공간 사용 - 공간복잡도 O(n)
+        List<Integer> evenList = new ArrayList<>();
+        List<Integer> oddList= new ArrayList<>();
+
+        int index = 0; // 결과배열 커서
+        for (int i = 0; i < nums.length; i++) {
+            if(nums[i] % 2 ==0){// even
+                evenList.add(nums[i]);
+            }else{
+                oddList.add(nums[i]);
+            }
+        }
+
+//        Iterator i = evenList.iterator();
+//        Iterator j = oddList.iterator();
+//        while( i.hasNext()){
+//            nums[index++] = (int) i.next();
+//        }
+//        while( j.hasNext()){
+//            nums[index++] = (int) j.next();
+//        }
+        for(Integer i: evenList){
+            nums[index++] = i.intValue();
+        }
+        for(Integer i: oddList){
+            nums[index++] = i.intValue();
+        }*/
+
+        //3. Stream
+        //return IntStream.concat(IntStream.of(nums).filter(a->a % 2==0).sorted(), IntStream.of(nums).filter(a->a % 2!=0).sorted()).toArray();
+
+        return nums;
 
     }
+    /**
+     * 1051. Height Checker
+    https://leetcode.com/problems/height-checker/
+    A school is trying to take an annual photo of all the students. The students are asked to stand in a single file line in non-decreasing order by height. Let this ordering be represented by the integer array expected where expected[i] is the expected height of the ith student in line.
 
+    You are given an integer array heights representing the current order that the students are standing in. Each heights[i] is the height of the ith student in line (0-indexed).
+
+    Return the number of indices where heights[i] != expected[i].
+
+    Example 1:
+    Input: heights = [1,1,4,2,1,3]
+    Output: 3
+    Explanation:
+    heights:  [1,1,4,2,1,3]
+    expected: [1,1,1,2,3,4]
+    Indices 2, 4, and 5 do not match.
+
+    Example 2:
+    Input: heights = [5,1,2,3,4]
+    Output: 5
+    Explanation:
+    heights:  [5,1,2,3,4]
+    expected: [1,2,3,4,5]
+    All indices do not match.
+
+    Example 3:
+    Input: heights = [1,2,3,4,5]
+    Output: 0
+    Explanation:
+    heights:  [1,2,3,4,5]
+    expected: [1,2,3,4,5]
+    All indices match.
+
+
+    Constraints:
+
+    1 <= heights.length <= 100
+    1 <= heights[i] <= 100
+    */
+    public int heightChecker(int[] heights) {
+
+
+        //2.추가 공간 사용
+        int[] expected = heights.clone();
+//        int[] expected = Arrays.copyOf(heights,heights.length);
+//        Arrays.sort(expected);
+//        int[] expected = Arrays.stream(heights).sorted().toArray();
+        int cnt = 0;
+        for (int i = 0; i < heights.length ; i++) {
+            if(heights[i] != expected[i]){
+                cnt++;
+            }
+        }
+
+        return cnt;
+
+    }
+    /**
+     * 414.Third Maximum Number
+     https://leetcode.com/problems/third-maximum-number/
+    Solution
+    Given an integer array nums, return the third distinct maximum number in this array. If the third maximum does not exist, return the maximum number.
+
+    Example 1:
+
+    Input: nums = [3,2,1]
+    Output: 1
+    Explanation:
+    The first distinct maximum is 3.
+    The second distinct maximum is 2.
+    The third distinct maximum is 1.
+
+    Example 2:
+    Input: nums = [1,2]
+    Output: 2
+    Explanation:
+    The first distinct maximum is 2.
+    The second distinct maximum is 1.
+    The third distinct maximum does not exist, so the maximum (2) is returned instead.
+
+    Example 3:
+    Input: nums = [2,2,3,1]
+    Output: 1
+    Explanation:
+    The first distinct maximum is 3.
+    The second distinct maximum is 2 (both 2's are counted together since they have the same value).
+    The third distinct maximum is 1.
+
+
+    Constraints:
+
+    1 <= nums.length <= 104
+    -231 <= nums[i] <= 231 - 1
+
+
+    Follow up: Can you find an O(n) solution?*/
+    public int thirdMax(int[] nums) {  // 중복제거하고 세번째로 큰수 찾기!
+
+        if(nums.length == 1){return nums[0];}  //edge case
+
+        // 1. 일반 배열로 처리, 정렬된 배열을 inplace 공간에  중복 제거해서 앞에서부터 채우고 채워진 갯수만큼을 배열로 생각하고 계
+        Arrays.sort(nums);
+        int index = 0;
+        for (int i = 1; i < nums.length; i++) {
+            if(nums[index] != nums[i]){
+                index++; // 다음인덱스로
+                nums[index] = nums[i];
+            }
+        }
+        if(index < 2){
+            return nums[1];
+        }
+        return nums[index-2];
+
+        //   3-1. Stream  정렬  ( 새배열 필요 )
+//        int[] distinctNums = Arrays.stream(nums).distinct().sorted().toArray();
+//        if(distinctNums.length < 3){
+//            return distinctNums[distinctNums.length-1]; // 3보다 작으면 마지막요소 (max값)
+//        }
+//        return distinctNums[distinctNums.length-3];
+
+        // 3-2. Stream 역순 정렬
+//        int[] distinctNums =  Arrays.stream(nums).boxed().distinct().sorted(Comparator.reverseOrder()).mapToInt(Integer::intValue).toArray();
+//        if(distinctNums.length < 3){
+//            return distinctNums[0];
+//        }
+//        return distinctNums[2];
+
+    }
 
 }

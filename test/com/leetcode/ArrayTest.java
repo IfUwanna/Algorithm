@@ -90,4 +90,14 @@ class ArrayTest {
     void moveZeroes() {
         array.moveZeroes(new int[]{0,1,0,3,12});
     }
+
+    @Test
+    void heightChecker() {
+        assertEquals(3,array.heightChecker(new int[]{1,1,4,2,1,3}));
+    }
+
+    @Test
+    void thirdMax() {
+        assertEquals(3,array.thirdMax(new int[]{2,2,3,1}));
+    }
 }
