@@ -172,6 +172,10 @@ String streamSortDESC_Lambda = Stream.of(stringArr3).sorted((o1,o2)->o2.compareT
 			System.out.print(value + " ");
 		}
 	}
-	    
 
+	public void swap(int[] nums, int first,int second){
+		int temp=nums[first];
+		nums[first]=nums[second];
+		nums[second]=temp;
+	}
 }

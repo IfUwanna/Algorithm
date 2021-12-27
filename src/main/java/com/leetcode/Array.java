@@ -1,6 +1,8 @@
 package com.leetcode;
 
 import java.util.*;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -790,12 +792,9 @@ public class Array {
     The second distinct maximum is 2 (both 2's are counted together since they have the same value).
     The third distinct maximum is 1.
 
-
     Constraints:
-
     1 <= nums.length <= 104
     -231 <= nums[i] <= 231 - 1
-
 
     Follow up: Can you find an O(n) solution?*/
     public int thirdMax(int[] nums) {  // 중복제거하고 세번째로 큰수 찾기!
@@ -831,5 +830,65 @@ public class Array {
 //        return distinctNums[2];
 
     }
+    /**
+    * 448.Find All Numbers Disappeared in an Array
+    * https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/
 
+    Solution
+    Given an array nums of n integers where nums[i] is in the range [1, n], return an array of all the integers in the range [1, n] that do not appear in nums.
+
+    Example 1:
+    Input: nums = [4,3,2,7,8,2,3,1]
+    Output: [5,6]
+
+    Example 2:
+    Input: nums = [1,1]
+    Output: [2]
+
+    Constraints:
+    n == nums.length
+    1 <= n <= 105
+    1 <= nums[i] <= n
+
+    Follow up: Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.*/
+    public List<Integer> findDisappearedNumbers(int[] nums) {
+        //배열안에 1-배열길이까지 숫자가 있는데 빠진 숫자를 찾아라!!
+
+        //1. Hashset이용
+//        List<Integer> result = new ArrayList<>();
+//
+//        Set<Integer> hs = new HashSet<>();
+//        for(int num: nums){
+//            hs.add(num);
+//        }
+//        for(int i=1; i<=nums.length; i++){
+//            if(!hs.contains(i)){
+//                result.add(i);
+//            }
+//        }
+//        return result;
+
+        //2. 값이 length 범위 안이니까 값을 index로해서 다른 배열에 넣고 초기값(0)인 인덱스는 없는값이다.
+        List<Integer> result = new ArrayList<>();
+        int[] nums2 = new int[nums.length];
+        for(int i=0; i<nums.length; i++){
+            nums2[nums[1]-1] = 1;
+        }
+        for(int j=0; j<nums2.length; j++){
+            if(nums2[j] == 0){
+                result.add(j+1);
+            }
+        }
+        return result;
+
+        // ㅋㅋㅋ 시간복잡도 초과여
+//        List<Integer> numsList = Arrays.stream(nums).boxed().collect(Collectors.toList());
+//        List<Integer> result = new ArrayList<>();
+//        for (int i = 1; i <= nums.length; i++) {
+//            if(!numsList.contains(i)){
+//                result.add(i);
+//            }
+//        }
+//        return result;
+    }
 }
