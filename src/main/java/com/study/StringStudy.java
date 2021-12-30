@@ -11,7 +11,7 @@ package com.study;
  * -----------------------------------------------------------
  * 2021/12/21        Jihun Park       최초 생성
  */
-public class String {
+public class StringStudy {
 
 
     // 배열은[] 이걸로 접근. length 이거다!
