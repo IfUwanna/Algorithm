@@ -13,8 +13,9 @@ package com.leetcode.easy;
  */
 public class PalindromeNumber {
 
-    /*
-    9. Palindrome Number
+    /**
+    9. Palindrome Number    거꾸로해도 이효리!
+     https://leetcode.com/problems/palindrome-number/
     Given an integer x, return true if x is palindrome integer.
 
     An integer is a palindrome when it reads the same backward as forward.
