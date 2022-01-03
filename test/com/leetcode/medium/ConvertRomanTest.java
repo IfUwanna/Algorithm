@@ -15,21 +15,21 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * -----------------------------------------------------------
  * 2021/04/28        cjos       최초 생성
  */
-class IntegerToRomanTest {
+class ConvertRomanTest {
 
-    IntegerToRoman integerToRoman = new IntegerToRoman();
+    ConvertRoman convertRoman = new ConvertRoman();
 
     @Test
-    void intoRoman() {
-        assertEquals("III",integerToRoman.intoRoman(3));
+    void romanToInt() {
+       // assertEquals("III", convertRoman.romanToInt(3));
     }
 
     @Test
-    void templateTest() {
+    void IntToRoman() {
 
-        assertEquals("MCMXCIV",integerToRoman.intoRoman(4));
-        assertEquals("IX",integerToRoman.intoRoman(9));
-        assertEquals("LVIII",integerToRoman.intoRoman(58));
-        assertEquals("MCMXCIV",integerToRoman.intoRoman(1994));
+//        assertEquals("III", convertRoman.intToRoman(3));
+//        assertEquals("IX", convertRoman.intToRoman(9));
+//        assertEquals("LVIII", convertRoman.intToRoman(58));
+        assertEquals("MCMXCIV", convertRoman.intToRoman(1994));
     }
 }
