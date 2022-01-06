@@ -1,10 +1,8 @@
 package com.leetcode;
 
-import java.util.*;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * packageName    : com.leetcode.Feature
@@ -628,10 +626,26 @@ public class Array {
             }
         }
 
-        //Arrays.fill(nums,nums.length-zeroCnt,nums.length,0);
-        for (int i = nums.length-zeroCnt; i < nums.length ; i++) {
-            nums[i] = 0;
-        }
+//        //Arrays.fill(nums,nums.length-zeroCnt,nums.length,0);
+//        for (int i = nums.length-zeroCnt; i < nums.length ; i++) {
+//            nums[i] = 0;
+//        }
+//        int len = nums.length;
+//        int index = 0;
+//        int zeroCnt = 0;
+//        //int min = Integer.MAX_VALUE;
+//
+//        for(int i=0;i<len;i++){
+//            if(nums[i] == 0){
+//                zeroCnt++;
+//            }else{
+//                nums[index++] = Math.min(nums[i],min);
+//            }
+//        }
+//        //set zero
+//        for(int i = len-zeroCnt; i<len; i++){
+//            nums[i] = 0;
+//        }
     }
     /**
      * 905.sort Array By Parity
