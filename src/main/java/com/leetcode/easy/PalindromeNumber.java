@@ -40,7 +40,6 @@ public class PalindromeNumber {
     Input: x = -101
     Output: false
      */
-
     public boolean isPalindrome(int x) {
 
         // convert int to String
