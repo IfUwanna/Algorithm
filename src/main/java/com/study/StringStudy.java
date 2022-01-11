@@ -37,5 +37,8 @@ public class StringStudy {
         for (char c : ch) {
             System.out.println(c);
         }
+        // StringBuilder 마지막글자 자르기
+        //sb.setLength(sb.length()- 1)
+
     }
 }
