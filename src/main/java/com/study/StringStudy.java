@@ -40,5 +40,12 @@ public class StringStudy {
         // StringBuilder 마지막글자 자르기
         //sb.setLength(sb.length()- 1)
 
+        // StringBuilder, StringBuffer 초기화 방법 3가지
+        StringBuilder sb = new StringBuilder();
+
+        sb = new StringBuilder();   // 1. 새로운 인스턴스 생성
+        sb.delete(0, sb.length());  // 2. delete() 이용
+        sb.setLength(0);            // 3. setLength() 이용
+
     }
 }
