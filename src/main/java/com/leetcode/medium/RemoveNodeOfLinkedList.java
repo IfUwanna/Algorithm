@@ -1,6 +1,6 @@
 package com.leetcode.medium;
 
-import com.leetcode.ListNode;
+import com.leetcode.core.ListNode;
 
 /**
  * packageName    : com.leetcode.medium

@@ -1,7 +1,7 @@
 package com.leetcode.easy;
 
 
-import com.leetcode.ListNode;
+import com.leetcode.core.ListNode;
 
 /**
  * packageName    : com.leetcode.easy
