@@ -13,6 +13,8 @@ package com.leetcode.easy;
  */
 public class FloodFill {
 
+    private final int[][] DIRECTIONS = new int[][]{{-1,0},{0,1},{1,0},{0,-1}};
+
     /**
      * methodName : 733.Flood Fill
      * author : Jihun Park
@@ -36,10 +38,9 @@ public class FloodFill {
             int currentColor = image[sr][sc];
             if(currentColor == color){ // 현재 컬러가 전달받은 바꾸기 전 컬러와 같으면 새로운 컬러로 채워넣고 4방향 전파
                 image[sr][sc] = newColor;
-                dfs(image,sr-1,sc,color,newColor);
-                dfs(image,sr+1,sc,color,newColor);
-                dfs(image,sr,sc-1,color,newColor);
-                dfs(image,sr,sc+1,color,newColor);
+                for(int[] d : DIRECTIONS){ // 시계방향 전파
+                    dfs(image,sr+d[0],sc+d[1],color,newColor);
+                }
             }
         }
     }
