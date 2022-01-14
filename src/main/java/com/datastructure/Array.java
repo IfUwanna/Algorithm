@@ -1,17 +1,15 @@
 package com.datastructure;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Array {
 
-	public void main() {
+    public void main() {
 		
 /*		
  * 이 클래스에는 배열 조작 (예 : 정렬 및 검색)을위한 다양한 메소드가 포함되어 있습니다. 이 클래스에는 Array를 List으로 볼 수있는 정적 팩토리도 포함되어 있습니다.
@@ -24,35 +22,35 @@ NullPointerException지정된 배열 참조가 null 인 경우, 이 클래스의
 
 클래스마다 기본적으로 구현하고 있는 Comparable 인터페이스의 compereTo 를 기준으로 정렬됩니다.
 이 클래스는 Java Collections Framework 멤버입니다 .*/
-		
+
 // byte[] char[] double[] short[] long[] int[] float[] Primitive Type타입은 불가!
-		
-/** Array 선언 */	
+
+/** Array 선언 */
 //크기 할당 & 초기화 없이 배열 참조변수만 선언		
-int[] arr;
-int arr2[];
+        int[] arr;
+        int arr2[];
 //선언과 동시에 배열 크기 할당
-int[] arr3 = new int[5]; 
-String[] arr4 = new String[5];
+        int[] arr3 = new int[5];
+        String[] arr4 = new String[5];
 //기존 배열의 참조 변수에 초기화 할당하기
-int[] arr5;
-arr5 = new int[5];
-int[] arr6 = {1,2,3,4,5};
-int[] arr7 = new int[]{1,2,3,4,5}; 
-int[] odds = {1,3,5,7,9};
+        int[] arr5;
+        arr5 = new int[5];
+        int[] arr6 = {1, 2, 3, 4, 5};
+        int[] arr7 = new int[]{1, 2, 3, 4, 5};
+        int[] odds = {1, 3, 5, 7, 9};
 //2차원 배열 선언 
-int[][] arr8 = new int[4][3]; //3의 크기의 배열을 4개 가질 수 있는 2차원 배열 할당 
-int[][] arr9 = { {2, 5, 3}, {4, 4, 1}, {1, 7, 3}, {3, 4, 5}};
+        int[][] arr8 = new int[4][3]; //3의 크기의 배열을 4개 가질 수 있는 2차원 배열 할당
+        int[][] arr9 = {{2, 5, 3}, {4, 4, 1}, {1, 7, 3}, {3, 4, 5}};
 
 
 /** Arrays.Sort(); */
-int[] intArr = new int[] {1,3,5,2,4};							//Primitive Type
-double[] doubletArr = new double[] {1.1, 3.3, 5.5, 2.2, 4.4};	//Primitive Type
-String[] stringArr = new String[] {"A","C","B","E","D"};   		//Reference type(Wrapper Class)
+        int[] intArr = new int[]{1, 3, 5, 2, 4};                            //Primitive Type
+        double[] doubletArr = new double[]{1.1, 3.3, 5.5, 2.2, 4.4};    //Primitive Type
+        String[] stringArr = new String[]{"A", "C", "B", "E", "D"};        //Reference type(Wrapper Class)
 
-Arrays.sort(intArr);		//1 2 3 4 5 
-Arrays.sort(doubletArr);	//1.1 2.2 3.3 4.4 5.5 
-Arrays.sort(stringArr);		//A B C D E 
+        Arrays.sort(intArr);        //1 2 3 4 5
+        Arrays.sort(doubletArr);    //1.1 2.2 3.3 4.4 5.5
+        Arrays.sort(stringArr);        //A B C D E
 //Arrays.sort(intArr,1,5);   // intArr[from]~intArr[to-1] 의 값 (5,2,4) 만 정렬
 
 /** Arrays.copyOf(intArr, 3); */
@@ -61,36 +59,36 @@ Arrays.sort(stringArr);		//A B C D E
 //Arrays.copyOf(intArr,10);		// int[10] {1,2,3,4,5,0,0,0,0,0}
 //Arrays.copyOf(stringArr,10);	// String[10] {A,B,C,D,E,null,null,null,null,null}
 
-/** 
+/**
  * Arrays.copyOfRange(originalArray, from, to);
  * static <T> T[] copyOfRange(T[] original, int from, int to)
-  * arr[from]~arr[to-1]의 까지 잘라서 복제
-  * 길이 to-from 의 배열이 생성되고 남는건 기본값으로 채움!
+ * arr[from]~arr[to-1]의 까지 잘라서 복제
+ * 길이 to-from 의 배열이 생성되고 남는건 기본값으로 채움!
  * */
 
-Arrays.copyOfRange(intArr,0,3);  // 1 2 3 
-Arrays.copyOfRange(intArr,2,4);  // 3 4 
-Arrays.copyOfRange(intArr,0,10);  // 1 2 3 4 5 0 0 0 0 0 
-Arrays.copyOfRange(stringArr,0,3); // A B C
-Arrays.copyOfRange(stringArr,2,4); // C D 
-Arrays.copyOfRange(stringArr,0,10); // A B C D E null null null null null 
+        Arrays.copyOfRange(intArr, 0, 3);  // 1 2 3
+        Arrays.copyOfRange(intArr, 2, 4);  // 3 4
+        Arrays.copyOfRange(intArr, 0, 10);  // 1 2 3 4 5 0 0 0 0 0
+        Arrays.copyOfRange(stringArr, 0, 3); // A B C
+        Arrays.copyOfRange(stringArr, 2, 4); // C D
+        Arrays.copyOfRange(stringArr, 0, 10); // A B C D E null null null null null
 
 //printCollection(new ArrayList<String>(Arrays.asList("A","B","C")));
 
 //for(int value : intArr) {
-for(int value : Arrays.copyOfRange(intArr,0,10)) { //남는건 기본값으로 채움! Reference T
-	System.out.print(value + " ");
-}
-System.out.print("\n");
-for(double value : doubletArr) {
-	System.out.print(value + " ");
-}
-System.out.print("\n");
+        for (int value : Arrays.copyOfRange(intArr, 0, 10)) { //남는건 기본값으로 채움! Reference T
+            System.out.print(value + " ");
+        }
+        System.out.print("\n");
+        for (double value : doubletArr) {
+            System.out.print(value + " ");
+        }
+        System.out.print("\n");
 //for(String value : stringArr) {
-	for(String value : Arrays.copyOfRange(stringArr,2,4)) {
-	System.out.print(value + " ");
-}
-System.out.print("\n");
+        for (String value : Arrays.copyOfRange(stringArr, 2, 4)) {
+            System.out.print(value + " ");
+        }
+        System.out.print("\n");
 
 
 /*	
@@ -110,43 +108,43 @@ default Comparator<T> reversed()	Comparator의 역순인 Comparator를 반환함
 
 
 //Comparator
-Integer[] integerArr = new Integer[] {1,3,5,2,4};				
-String[] stringArr2 = new String[] {"A","C","B","E","D"};   		
+        Integer[] integerArr = new Integer[]{1, 3, 5, 2, 4};
+        String[] stringArr2 = new String[]{"A", "C", "B", "E", "D"};
 
-Arrays.sort(integerArr,Comparator.reverseOrder());	//내림차순 
+        Arrays.sort(integerArr, Comparator.reverseOrder());    //내림차순
 //Arrays.sort(stringArr2,Collections.reverseOrder());	//내림차순
 //Arrays.sort(stringArr2,new CustomComparator());	//내림차순
-Arrays.sort(stringArr2,new Comparator<String>() {
-	@Override
-	public int compare(String o1, String o2) {
-		return o2.compareTo(o1); //내림차순
-	}
-});	
+        Arrays.sort(stringArr2, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o2.compareTo(o1); //내림차순
+            }
+        });
 
-for(Integer value : integerArr) {
-	System.out.print(value + " ");
-}
-System.out.print("\n");
-for(String value : stringArr2) {
-	System.out.print(value + " ");
-}
-		
+        for (Integer value : integerArr) {
+            System.out.print(value + " ");
+        }
+        System.out.print("\n");
+        for (String value : stringArr2) {
+            System.out.print(value + " ");
+        }
 
-/* Stream을 이용한 정렬 */
-String str = "ACBED";
 
-String[] stringArr3 = str.split("");   // new String[] {"A","C","F","E","D"} 배열로 변환
-String streamSortASC = Stream.of(stringArr3).sorted().collect(Collectors.joining());
-String streamSortDESC = Stream.of(stringArr3).sorted(Comparator.reverseOrder()).collect(Collectors.joining());
+        /* Stream을 이용한 정렬 */
+        String str = "ACBED";
+
+        String[] stringArr3 = str.split("");   // new String[] {"A","C","F","E","D"} 배열로 변환
+        String streamSortASC = Stream.of(stringArr3).sorted().collect(Collectors.joining());
+        String streamSortDESC = Stream.of(stringArr3).sorted(Comparator.reverseOrder()).collect(Collectors.joining());
 //Lambda
 
 
-String streamSortASC2 = Stream.of(stringArr3).sorted().collect(Collectors.joining());
-String streamSortDESC2 = Stream.of(stringArr3).sorted(Comparator.reverseOrder()).collect(Collectors.joining());
+        String streamSortASC2 = Stream.of(stringArr3).sorted().collect(Collectors.joining());
+        String streamSortDESC2 = Stream.of(stringArr3).sorted(Comparator.reverseOrder()).collect(Collectors.joining());
 
-String streamSort2 = Stream.of(stringArr3).sorted(Collections.reverseOrder()).collect(Collectors.joining());
-String streamSortASC_Lambda = Stream.of(stringArr3).sorted((o1,o2)->o1.compareTo(o2)).collect(Collectors.joining());
-String streamSortDESC_Lambda = Stream.of(stringArr3).sorted((o1,o2)->o2.compareTo(o1)).collect(Collectors.joining());
+        String streamSort2 = Stream.of(stringArr3).sorted(Collections.reverseOrder()).collect(Collectors.joining());
+        String streamSortASC_Lambda = Stream.of(stringArr3).sorted((o1, o2) -> o1.compareTo(o2)).collect(Collectors.joining());
+        String streamSortDESC_Lambda = Stream.of(stringArr3).sorted((o1, o2) -> o2.compareTo(o1)).collect(Collectors.joining());
 
 
 
@@ -155,27 +153,82 @@ String streamSortDESC_Lambda = Stream.of(stringArr3).sorted((o1,o2)->o2.compareT
 		통사론:
 		stream.sorted( (a, b) -> a.compareTo( b ) )
 		*/
-		
-	}
 
-	//customComparator
-	class CustomComparator implements Comparator<String> {
-	    @Override
-	    public int compare(String o1, String o2) {
-	    	return o2.compareTo(o1); //내림차순
-	    }
-	}
-	
-	// primitive Type은 generic 지원x ( 제네릭으로 사용되는 모든 항목은 Object로 변환 가능해야 함)
-	private <T> void printCollection(Collection<T> t) {
-		for(Object value : t) {
-			System.out.print(value + " ");
-		}
-	}
+    }
 
-	public void swap(int[] nums, int first,int second){
-		int temp=nums[first];
-		nums[first]=nums[second];
-		nums[second]=temp;
-	}
+    //customComparator
+    class CustomComparator implements Comparator<String> {
+        @Override
+        public int compare(String o1, String o2) {
+            return o2.compareTo(o1); //내림차순
+        }
+    }
+
+    // primitive Type은 generic 지원x ( 제네릭으로 사용되는 모든 항목은 Object로 변환 가능해야 함)
+    private <T> void printCollection(Collection<T> t) {
+        for (Object value : t) {
+            System.out.print(value + " ");
+        }
+    }
+
+    public void swap(int[] nums, int first, int second) {
+        int temp = nums[first];
+        nums[first] = nums[second];
+        nums[second] = temp;
+    }
+
+
+    /**
+     * methodName : sort
+     * author : Jihun Park
+     * description :
+     */
+    public void sort() {
+
+        // 2차원 배열 정렬하기
+        int[][] arr = new int[][]{{5,40},{3,50},{1,30},{4,20},{2,10}};
+        int[][] arr2 = new int[][]{{5,40},{3,50},{1,30},{4,20},{2,10},{6,40},{6,50},{6,10},{6,20},{6,30}};
+
+        // 1. Comparator 익명 클래스 구현
+        Arrays.sort(arr, new Comparator<int[]>() { //높은 점수로 정렬
+            @Override
+            public int compare(int[] o1, int[] o2) {
+                return o1[0]-o2[0]; // 첫번째 숫자 기준 오름차순 : {1,30}{2,10}{3,50}{4,20}{5,40}
+                //return o2[0]-o1[0]; // 첫번째 숫자 기준 내림차순 : {5,40}{4,20}{3,50}{2,10}{1,30}
+                //return o1[1]-o2[1]; // 두번째 숫자 기준 오름차순 : {2,10}{4,20}{1,30}{5,40}{3,50}
+                //return o2[1]-o1[1]; // 두번째 숫자 기준 내림차순 : {3,50}{5,40}{1,30}{4,20}{2,10}
+                //return o1[0] != o2[0] ? o1[0] - o2[0] : o1[1] - o2[1]; // 첫번째 기준 오름차순 > 두번째 기준 오름차순  : {1,30}{2,10}{3,50}{4,20}{5,40}{6,10}{6,20}{6,30}{6,40}{6,50}
+                //return o1[0] != o2[0] ? o1[0] - o2[0] : o2[1] - o1[1]; // 첫번째 기준 오름차순 > 두번째 기준 내림차순  : {1,30}{2,10}{3,50}{4,20}{5,40}{6,50}{6,40}{6,30}{6,20}{6,10}
+            }
+        });
+
+
+        // 2. Lambda 사용 - Java 8이상
+        Arrays.sort(arr, (o1, o2) -> {
+            return o1[0] - o2[0];
+        });
+
+        // 3.  Comparator.comparing()  : Comparable 키를 추출해서 Comparator 객체로 만드는 Function 함수를 인수로 받는 정적 메서드 comparing 을 포함
+        Arrays.sort(arr, Comparator.comparingInt((int[] o) -> o[0]));               // 첫번째 숫자 기준 오름차순 : {1,30}{2,10}{3,50}{4,20}{5,40}
+        Arrays.sort(arr, Comparator.comparingInt((int[] o) -> o[0]).reversed());    // 첫번째 숫자 기준 내림차순 : {5,40}{4,20}{3,50}{2,10}{1,30}
+        Arrays.sort(arr, Comparator.comparingInt((int[] o) -> o[1]));               // 두번째 숫자 기준 오름차순 : {2,10}{4,20}{1,30}{5,40}{3,50}
+        Arrays.sort(arr, Comparator.comparingInt((int[] o) -> o[1]).reversed());    // 두번째 숫자 기준 내림차순 : {3,50}{5,40}{1,30}{4,20}{2,10}
+        Arrays.sort(arr2,Comparator.comparingInt((int[] o)->o[0]).thenComparingInt((int[] o)->o[1])); // 첫번째 기준 오름차순 > 두번째 기준 오름차순
+        printArray(arr2);
+        Arrays.sort(arr2,Comparator.comparingInt((int[] o)->o[0]).thenComparingInt((int[] o)->o[1])); // 첫번째 기준 오름차순 > 두번째 기준 오름차순
+        printArray(arr2);
+        // Arrays.sort(arr,Comparator.comparingInt((int[] o)->o[1])
+        //Arrays.sort(arr, Comparator.comparingInt(o -> o[1]));
+
+
+
+    }
+
+    private void printArray(int[][] arr){
+        for (int[] a : arr) {
+            System.out.print("{" + a[0] + "," + a[1] + "}");
+        }
+        System.out.println();
+    }
+
 }
