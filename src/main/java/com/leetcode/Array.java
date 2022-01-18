@@ -86,53 +86,7 @@ public class Array {
         }
         return cnt;
     }
-    /** 977. Squares of a Sorted Array
 
-    Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
-
-    Example 1:
-    Input: nums = [-4,-1,0,3,10]
-    Output: [0,1,9,16,100]
-    Explanation: After squaring, the array becomes [16,1,0,9,100].
-    After sorting, it becomes [0,1,9,16,100].
-
-    Example 2:
-    Input: nums = [-7,-3,2,3,11]
-    Output: [4,9,9,49,121]
-
-    Constraints:
-    1 <= nums.length <= 104
-    -104 <= nums[i] <= 104
-    nums is sorted in non-decreasing order.
-
-    Follow up: Squaring each element and sorting the new array is very trivial, could you find an O(n) solution using a different approach?
-    https://leetcode.com/problems/squares-of-a-sorted-array/
-    */
-    public int[] sortedSquares(int[] nums) {
-
-        //1. n log n - Arrays sort
-//        for(int i=0; i <nums.length; i++){
-//            nums[i] = nums[i] * nums[i];
-//        }
-//        Arrays.sort(nums);
-//        return nums;
-
-
-        //2. O(n) 배열의 양끝이 가장 큰 값이니까 절대값 비교해가면서 제일 큰 것부터 끝에서 채움
-        int[] resultArray = new int[nums.length];
-        int leftIndex = 0;
-        int rightIndex = nums.length-1;
-        for(int i=0; i <nums.length; i++){
-            if(Math.abs(nums[leftIndex]) >= Math.abs(nums[rightIndex])){ // 왼쪽의 절대값이 크거나 같음
-                resultArray[nums.length-1-i] = nums[leftIndex]* nums[leftIndex]; //가장 마지막 배열값부터 채워넣음
-                leftIndex++;
-            }else{ // 오른쪽의 절대값이 클 경우
-                resultArray[nums.length-1-i] = nums[rightIndex]* nums[rightIndex]; //가장 마지막 배열값부터 채워넣음
-                rightIndex--;
-            }
-        }
-        return resultArray;
-    }
     /**
      * 1089.Duplicate Zeros
     https://leetcode.com/problems/duplicate-zeros/

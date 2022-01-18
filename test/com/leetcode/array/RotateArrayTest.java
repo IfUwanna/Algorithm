@@ -1,8 +1,6 @@
-package com.leetcode.medium;
+package com.leetcode.array;
 
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * packageName    : com.leetcode.medium

@@ -1,6 +1,7 @@
-package com.leetcode.easy;
+package com.leetcode.array;
 
 import org.junit.jupiter.api.Test;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -22,4 +23,5 @@ class MaximumSubarrayTest {
         //assertEquals(6,maximumSubarray.maxSubArray(new int[]{-2,1,-3,4,-1,2,1,-5,4}));
         assertEquals(21,maximumSubarray.maxSubArray(new int[]{8,-19,5,-4,20}));
     }
+
 }
