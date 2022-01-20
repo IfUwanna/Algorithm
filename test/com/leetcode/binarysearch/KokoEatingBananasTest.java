@@ -22,6 +22,6 @@ class KokoEatingBananasTest {
 
     @Test
     void minEatingSpeed2() {
-        kokoEatingBananas.minEatingSpeed2(new int[]{3,6,7,11},8);
+        kokoEatingBananas.minEatingSpeed2(new int[]{3,6,7,11},8); //test
     }
 }
