@@ -16,7 +16,7 @@ import java.util.Arrays;
 public class SquaresOfSortedArray {
 
     /**
-     * methodName : 977. Squares of a Sorted Array
+     * methodName : 977. Squares of a Sorted Array [Easy]
      * author : Jihun Park
      * description :https://leetcode.com/problems/squares-of-a-sorted-array/
      * @param nums

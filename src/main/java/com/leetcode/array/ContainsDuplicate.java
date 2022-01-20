@@ -15,7 +15,7 @@ import java.util.Arrays;
  */
 public class ContainsDuplicate {
     /**
-     * methodName : 217. Contains Duplicate
+     * methodName : 217. Contains Duplicate [Easy]
      * author : Jihun Park
      * description : https://leetcode.com/problems/contains-duplicate/
      * @param nums

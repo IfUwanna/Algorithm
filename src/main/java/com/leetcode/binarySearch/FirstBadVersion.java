@@ -18,7 +18,7 @@ import java.util.List;
 public class FirstBadVersion {
 
     /**
-     * methodName : 278. First Bad Version
+     * methodName : 278. First Bad Version [Easy]
      * author : Jihun Park
      * description : https://leetcode.com/problems/first-bad-version/
      * @param n

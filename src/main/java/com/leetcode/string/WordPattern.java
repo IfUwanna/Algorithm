@@ -18,9 +18,9 @@ import java.util.Map;
 public class WordPattern {
 
     /**
-     * methodName : 290. Word Pattern
+     * methodName : 290. Word Pattern [Easy]
      * author : Jihun Park
-     * description : https://leetcode.com/problems/word-pattern/submissions/
+     * description : https://leetcode.com/problems/word-pattern
      * @param pattern
      * @param s
      * @return boolean

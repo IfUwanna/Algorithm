@@ -14,7 +14,7 @@ package com.leetcode.binarySearch;
 public class SearchInsertPosition {
 
     /**
-     * methodName : 35. Search Insert Position
+     * methodName : 35. Search Insert Position [Easy]
      * author : Jihun Park
      * description : https://leetcode.com/problems/search-insert-position/
      * @param nums

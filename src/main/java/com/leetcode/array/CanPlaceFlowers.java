@@ -13,7 +13,7 @@ package com.leetcode.array;
  */
 public class CanPlaceFlowers {
     /**
-     * methodName : 605. Can Place Flowers
+     * methodName : 605. Can Place Flowers [Easy]
      * author : Jihun Park
      * description : https://leetcode.com/problems/can-place-flowers/
      * @param flowerbed

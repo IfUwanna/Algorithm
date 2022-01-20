@@ -17,7 +17,7 @@ import java.util.Map;
 public class TwoSum {
 
     /**
-     * methodName : 1. Two Sum
+     * methodName : 1. Two Sum [Easy]
      * author : Jihun Park
      * description : https://leetcode.com/problems/two-sum/
      * @param nums

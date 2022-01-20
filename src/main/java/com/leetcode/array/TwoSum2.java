@@ -13,7 +13,7 @@ package com.leetcode.array;
  */
 public class TwoSum2 {
     /**
-     * methodName : 167. Two Sum II - Input Array Is Sorted
+     * methodName : 167. Two Sum II - Input Array Is Sorted [Easy]
      * author : Jihun Park
      * description : https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
      * @param numbers

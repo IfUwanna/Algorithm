@@ -16,7 +16,7 @@ public class BinarySearch {
 
 
     /**
-     * methodName : 704. Binary Search
+     * methodName : 704. Binary Search [Easy]
      * author : Jihun Park
      * description : https://leetcode.com/problems/binary-search/
      * @param nums

@@ -15,6 +15,12 @@ import java.util.Arrays;
  */
 public class MoveZeroes {
 
+    /**
+     * methodName : 283. Move Zeroes [Easy]
+     * author : Jihun Park
+     * description : https://leetcode.com/problems/move-zeroes/
+     * @param nums
+     */
     public void moveZeroes(int[] nums) {
 
         // 1. Using Pointer

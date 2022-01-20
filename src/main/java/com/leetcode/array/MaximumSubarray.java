@@ -16,7 +16,7 @@ import java.util.Arrays;
 public class MaximumSubarray {
 
     /**
-     * methodName : maxSubArray
+     * methodName : maxSubArray [Easy]
      * author : Jihun Park
      * description : https://leetcode.com/problems/maximum-subarray
      * DP, kadane's Algorithm

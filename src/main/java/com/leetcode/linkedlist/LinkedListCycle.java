@@ -17,6 +17,13 @@ import java.util.Set;
  * 2022/01/19        Jihun Park       최초 생성
  */
 public class LinkedListCycle {
+    /**
+     * methodName : 142. Linked List Cycle II [Medium]
+     * author : Jihun Park
+     * description : https://leetcode.com/problems/linked-list-cycle-ii/
+     * @param head
+     * @return list node
+     */
     public ListNode detectCycle(ListNode head) {
 
         // 1. using set
