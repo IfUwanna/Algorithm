@@ -1,9 +1,8 @@
 package com.leetcode;
 
-import com.leetcode.Array;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * packageName    : com.leetcode.Learn
@@ -86,10 +85,6 @@ class ArrayTest {
     void replaceElements() {
     }
 
-    @Test
-    void moveZeroes() {
-        array.moveZeroes(new int[]{0,1,0,3,12});
-    }
 
     @Test
     void heightChecker() {

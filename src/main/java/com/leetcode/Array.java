@@ -540,67 +540,7 @@ public class Array {
             return arr;*/
 
 }
-    /** 283. Move Zeroes
 
-    Solution
-    Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
-
-    Note that you must do this in-place without making a copy of the array.
-
-    Example 1:
-    Input: nums = [0,1,0,3,12]
-    Output: [1,3,12,0,0]
-
-    Example 2:
-    Input: nums = [0]
-    Output: [0]
-
-    Constraints:
-    1 <= nums.length <= 104
-    -231 <= nums[i] <= 231 - 1
-
-    Follow up: Could you minimize the total number of operations done?*/
-    public void moveZeroes(int[] nums) {
-
-        int index = 0; // 쓰고있는  인덱스
-        int zeroCnt = 0; // 0 개수
-        for (int i = 0; i < nums.length; i++) {
-
-            if (nums[i] == 0){
-                zeroCnt++;
-            }else{
-                nums[index] = nums[i]; //현재 인덱스에 쓰고 하나 이동
-                //오름차순 정렬 위해 비교해서 swap
-//                if( index!=0 && nums[index-1] > nums[index]){
-//                    int temp = nums[index-1];
-//                    nums[index-1] = nums[index];
-//                    nums[index] = temp; // swap
-//                }
-                index++;
-            }
-        }
-
-//        //Arrays.fill(nums,nums.length-zeroCnt,nums.length,0);
-//        for (int i = nums.length-zeroCnt; i < nums.length ; i++) {
-//            nums[i] = 0;
-//        }
-//        int len = nums.length;
-//        int index = 0;
-//        int zeroCnt = 0;
-//        //int min = Integer.MAX_VALUE;
-//
-//        for(int i=0;i<len;i++){
-//            if(nums[i] == 0){
-//                zeroCnt++;
-//            }else{
-//                nums[index++] = Math.min(nums[i],min);
-//            }
-//        }
-//        //set zero
-//        for(int i = len-zeroCnt; i<len; i++){
-//            nums[i] = 0;
-//        }
-    }
     /**
      * 905.sort Array By Parity
     https://leetcode.com/problems/sort-array-by-parity/

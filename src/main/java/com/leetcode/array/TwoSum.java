@@ -48,30 +48,4 @@ public class TwoSum {
         return null;
     }
 
-
-    /**
-     * methodName : 167. Two Sum II - Input Array Is Sorted
-     * author : Jihun Park
-     * description : https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
-     * @param numbers
-     * @param target
-     * @return int [ ]
-     */
-    public int[] twoSum2(int[] numbers, int target) {
-        int len = numbers.length;
-        int start = 0;
-        int end = len-1;
-
-        while(start < end){
-            int sum = numbers[start] + numbers[end];
-            if(target == sum){
-                break;
-            }else if(target > sum){ //sum을  줄여야 하니 end-1
-                end--;
-            }else{ // target < sum){ //sum을 늘려야하니 start +1
-                start++;
-            }
-        }
-        return new int[]{start+1,end+1};
-    }
 }
