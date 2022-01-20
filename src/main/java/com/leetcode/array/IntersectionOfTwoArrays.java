@@ -19,6 +19,14 @@ import java.util.Map;
 
 public class IntersectionOfTwoArrays {
 
+    /**
+     * methodName : 350. Intersection of Two Arrays II [Easy]
+     * author : Jihun Park
+     * description : https://leetcode.com/problems/intersection-of-two-arrays-ii/
+     * @param nums1
+     * @param nums2
+     * @return int[]
+     */
     public int[] intersect(int[] nums1, int[] nums2) {
 
         // 1. using array

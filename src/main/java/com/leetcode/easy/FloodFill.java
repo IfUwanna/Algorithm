@@ -23,7 +23,7 @@ public class FloodFill {
      * @param sr
      * @param sc
      * @param newColor
-     * @return int[ ][ ]
+     * @return int[][]
      */
     public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {
 

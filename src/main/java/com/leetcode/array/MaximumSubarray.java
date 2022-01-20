@@ -16,7 +16,7 @@ import java.util.Arrays;
 public class MaximumSubarray {
 
     /**
-     * methodName : maxSubArray [Easy]
+     * methodName : 53. Maximum Subarray [Easy]
      * author : Jihun Park
      * description : https://leetcode.com/problems/maximum-subarray
      * DP, kadane's Algorithm
@@ -47,7 +47,7 @@ public class MaximumSubarray {
         i<nums.length;i++)
 
         {
-            // 결국 최대 로컬max값에 현재값 더한거랑 현재값을 비교하는 건 같음!  카다네알고리즘!
+            // 결국 최대 로컬max값에 현재값 더한거랑 현재값을 비교하는 건 같음!  카데인 알고리즘!
             sum += nums[i];
             if (sum > max) {
                 max = sum;
