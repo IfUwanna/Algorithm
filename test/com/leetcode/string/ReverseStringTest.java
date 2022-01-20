@@ -1,8 +1,8 @@
-package com.leetcode.easy;
+package com.leetcode.string;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * packageName    : com.leetcode.easy
@@ -16,13 +16,13 @@ import static org.junit.jupiter.api.Assertions.*;
  * 2022/01/06        Jihun Park       최초 생성
  */
 class ReverseStringTest {
-    ReverseString reverseString = new ReverseString();
+    ReverseWordsInString3 reverseWordsInString3 = new ReverseWordsInString3();
     @Test
     void reverseString() {
     }
 
     @Test
     void reverseWords() {
-        assertEquals("s'teL ekat edoCteeL tsetnoc", reverseString.reverseWords("Let's take LeetCode contest"));
+        assertEquals("s'teL ekat edoCteeL tsetnoc", reverseWordsInString3.reverseWords("Let's take LeetCode contest"));
     }
 }
