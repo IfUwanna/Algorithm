@@ -1,4 +1,4 @@
-package com.leetcode.easy;
+package com.leetcode.linkedlist;
 
 
 import com.leetcode.core.ListNode;
@@ -16,33 +16,14 @@ import com.leetcode.core.ListNode;
  */
 public class MiddleOfTheLinkedList {
 
-    /** 876. Middle of the Linked List
-     * https://leetcode.com/problems/middle-of-the-linked-list/
-     *
-     * Given the head of a singly linked list, return the middle node of the linked list.
-     * If there are two middle nodes, return the second middle node.
-     *
-     * Example 1:
-     * Input: head = [1,2,3,4,5]
-     * Output: [3,4,5]
-     * Explanation: The middle node of the list is node 3
-     *
-     * Example 2:
-     * Input: head = [1,2,3,4,5,6]
-     * Output: [4,5,6]
-     * Explanation: Since the list has two middle nodes with values 3 and 4, we return the second one.
-     *
-     * Constraints:
-     * The number of nodes in the list is in the range [1, 100].
-     * 1 <= Node.val <= 100
-     * - 배열으 ㅣ중간을 구할때
-     *     - 인덱스 기준 : 마지막인덱스- 처음인덱스/2
-     *         - 짝수 : 6개 (5-0)/2 =.2.5 그대로 인덱스 쓰면 왼쪽꺼
-     *         - 홀수 : 7개  (6-0)/2= 3 index3 그대로 인덱스 쓰면됨.
-     *     - length기준
-     *         - 짝수 : 6개 6/2 = 3  인덱스 그대로쓰면 중간중 오른쪽꺼
-     *         - 홀수 : 7개 7/2= 3.5 그대로 인덱스로 쓰면된다.
-     * */
+
+    /**
+     * methodName : 876. Middle of the Linked List [Easy]
+     * author : Jihun Park
+     * description : https://leetcode.com/problems/middle-of-the-linked-list/
+     * @param head
+     * @return list node
+     */
     public ListNode middleNode(ListNode head) {
 
 //        // 1.공간복잡도 O(1) 시간복잡도 O(N)+O(2/N)
@@ -77,6 +58,16 @@ public class MiddleOfTheLinkedList {
             fast = fast.next.next;
         }
         return slow;
+
+        /*
+        *      * - 배열으 ㅣ중간을 구할때
+         *     - 인덱스 기준 : 마지막인덱스- 처음인덱스/2
+         *         - 짝수 : 6개 (5-0)/2 =.2.5 그대로 인덱스 쓰면 왼쪽꺼
+         *         - 홀수 : 7개  (6-0)/2= 3 index3 그대로 인덱스 쓰면됨.
+         *     - length기준
+         *         - 짝수 : 6개 6/2 = 3  인덱스 그대로쓰면 중간중 오른쪽꺼
+         *         - 홀수 : 7개 7/2= 3.5 그대로 인덱스로 쓰면된다.
+        * */
 
     }
 
