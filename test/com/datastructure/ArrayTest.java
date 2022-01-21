@@ -2,8 +2,6 @@ package com.datastructure;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 /**
  * packageName    : com.datastructure
  * fileName       : ArrayTest
@@ -17,8 +15,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 class ArrayTest {
     Array array = new Array();
+
     @Test
+    void testMain() {
+        array.ListToArray();
+    }
+
     void sort() {
         array.sort();
+
     }
 }

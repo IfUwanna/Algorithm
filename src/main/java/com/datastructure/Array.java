@@ -1,9 +1,6 @@
 package com.datastructure;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -224,10 +221,60 @@ default Comparator<T> reversed()	Comparator의 역순인 Comparator를 반환함
 
     }
 
+
+    /**
+     * methodName : ListToArray
+     * author : Jihun Park
+     * description : list > array 변환
+     */
+    public void ListToArray(){
+        // set List (String) - reference types
+        List<String> list = new ArrayList<>();
+        list.add("a");
+        list.add("b");
+        list.add("c");
+        //
+        // 1. toArray() - 배열 선언과 동시에 할당
+        String[] arr = list.toArray(new String[0]);
+        //String[] arr = list.toArray(String[]::new);   // java11~ 이상
+
+        // 2. toArray() - 배열 선언 후 채워 넣음
+        String[] arr2 = new String[list.size()];
+        list.toArray(arr2);
+
+        // 3. Stream API (Java8 이상)
+        String[] arr3 = list.stream().toArray(String[]::new);
+
+        // set List (Integer)
+        List<Integer> list2 = new ArrayList<>();
+        list2.add(1);
+        list2.add(2);
+        list2.add(3);
+
+        // 4. int 기본형(primitive) 변환 - 전통적인 방법
+        int[] arr4 = new int[list2.size()];
+        for(int i = 0; i < list2.size(); i++){
+            arr4[i] = list2.get(i);
+        }
+        // 5. int 기본형(primitive) 변환 - Stream API (Java8 이상)
+        int[] arr5 = list2.stream().mapToInt(i->i).toArray();
+        //int[] example2 = list.stream().mapToInt(Integer::intValue).toArray();
+
+    }
     private void printArray(int[][] arr){
         for (int[] a : arr) {
             System.out.print("{" + a[0] + "," + a[1] + "}");
         }
+        System.out.println();
+    }
+
+    private void printArray(String[] arr){
+        System.out.print("[");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]);
+            if(i!=arr.length-1)System.out.print(",");
+        }
+        System.out.print("]");
         System.out.println();
     }
 
