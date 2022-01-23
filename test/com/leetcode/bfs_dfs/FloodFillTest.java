@@ -1,11 +1,10 @@
-package com.leetcode.medium;
+package com.leetcode.bfs_dfs;
 
-import com.leetcode.bfs_dfs.MaxAreaOfIsland;
 import org.junit.jupiter.api.Test;
 
 /**
- * packageName    : com.leetcode.medium
- * fileName       : MaxAreaOfIslandTest
+ * packageName    : com.leetcode.easy
+ * fileName       : FloodFillTest
  * author         : Jihun Park
  * date           : 2022/01/12
  * description    :
@@ -14,10 +13,12 @@ import org.junit.jupiter.api.Test;
  * -----------------------------------------------------------
  * 2022/01/12        Jihun Park       최초 생성
  */
-class MaxAreaOfIslandTest {
-    MaxAreaOfIsland maxAreaOfIsland = new MaxAreaOfIsland();
+class FloodFillTest {
+    FloodFill floodFill = new FloodFill();
     @Test
-    void maxAreaOfIsland() {
-        maxAreaOfIsland.maxAreaOfIsland(new int[][]{{0},{1}});
+    void floodFill() {
+        //floodFill.floodFill(new int[][]{{1,1,1},{1,1,0},{1,0,1}},1,1,2);
+        floodFill.floodFill(new int[][]{{0,0,0},{0,1,1}},1,1,1);
+
     }
 }

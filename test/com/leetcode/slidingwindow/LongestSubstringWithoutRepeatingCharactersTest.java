@@ -1,4 +1,4 @@
-package com.leetcode.medium;
+package com.leetcode.slidingwindow;
 
 import com.leetcode.slidingwindows.LongestSubstringWithoutRepeatingCharacters;
 import org.junit.jupiter.api.Test;
