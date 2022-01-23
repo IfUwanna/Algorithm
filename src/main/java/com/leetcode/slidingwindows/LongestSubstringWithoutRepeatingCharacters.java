@@ -1,4 +1,4 @@
-package com.leetcode.medium;
+package com.leetcode.slidingwindows;
 
 import java.util.Arrays;
 
@@ -15,35 +15,16 @@ import java.util.Arrays;
  */
 public class LongestSubstringWithoutRepeatingCharacters {
 
-
     /**
-     * 3. Longest Substring Without Repeating Characters
-     * https://leetcode.com/problems/longest-substring-without-repeating-characters/
-     * Given a string s, find the length of the longest substring without repeating characters.
-     *
-     * Example 1:
-     * Input: s = "abcabcbb"
-     * Output: 3
-     * Explanation: The answer is "abc", with the length of 3.
-     *
-     * Example 2:
-     * Input: s = "bbbbb"
-     * Output: 1
-     * Explanation: The answer is "b", with the length of 1.
-     *
-     * Example 3:
-     * Input: s = "pwwkew"
-     * Output: 3
-     * Explanation: The answer is "wke", with the length of 3.
-     * Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
-     *
-     * Constraints:
-     * 0 <= s.length <= 5 * 104
-     * s consists of English letters, digits, symbols and spaces.
+     * methodName : 3. Longest Substring Without Repeating Characters [Medium]
+     * author : Jihun Park
+     * description : https://leetcode.com/problems/longest-substring-without-repeating-characters/
+     * @param s
+     * @return int
      */
     public int lengthOfLongestSubstring(String s) {
 
-        // 1. Sliding Window - 배열 이
+        // 1. Sliding Window - 배열
         int[] chars = new int[128]; // 해당 문자의 중복여부 확인 + 마지막 위치를 저장하기 위함
         Arrays.fill(chars, -1);  // 인덱스를 저장할 것이기 때문에 초기값 0을 -1로 바꿔줌
         int len = s.length();

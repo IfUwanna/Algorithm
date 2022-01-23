@@ -1,4 +1,4 @@
-package com.leetcode.medium;
+package com.leetcode.slidingwindows;
 
 import java.util.Arrays;
 
@@ -15,6 +15,14 @@ import java.util.Arrays;
  */
 public class PermutationInString {
 
+    /**
+     * methodName : 567. Permutation in String [Medium]
+     * author : Jihun Park
+     * description : https://leetcode.com/problems/permutation-in-string/submissions/
+     * @param s1
+     * @param s2
+     * @return boolean
+     */
     public boolean checkInclusion(String s1, String s2) {
 
         //1. sort 이용
@@ -39,12 +47,26 @@ public class PermutationInString {
 
         for (int i = 0; i < len2; i++) { // count 0이되는 케이스 슬라이딩윈도우로 진행하며 체크
             map[s2.charAt(i)-'a']--;
-            if(i-len1 >= 0){ map[s2.charAt(i-len1)-'a']++;} //기준글자 이상 넘어갔을경우 이전 윈도우 왼쪽의 이전 글자는 ++해줌.
+            if(i-len1 >= 0){ map[s2.charAt(i-len1)-'a']++;} // 기준글자를 지나오면 왼쪽 윈도우 원복(++)해서 다음칸으로 옮김
             if(allZero(map)){
                return true;
             }
         }
         return false;
+
+//        int start = 0;
+//        for (int i = 0; i<len2; i++){
+//            map[s2.charAt(i)-'a']--;
+//            if(i-start == len1-1){
+//                if(this.allZero(map)){
+//                    return true;
+//                }else{
+//                    map[s2.charAt(start)-'a']++;
+//                    start++;
+//                }
+//
+//            }
+//        }
 
     }
 
