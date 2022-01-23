@@ -1,42 +1,44 @@
-package com.leetcode.binarySearch;
+package com.leetcode.binarysearch;
+
 
 /**
  * packageName    : com.leetcode.easy
- * fileName       : SearchInsertPosition
+ * fileName       : BinarySearch
  * author         : Jihun Park
- * date           : 2021/12/30
+ * date           : 2022/01/04
  * description    :
  * ===========================================================
  * DATE              AUTHOR             NOTE
  * -----------------------------------------------------------
- * 2021/12/30        Jihun Park       최초 생성
+ * 2022/01/04        Jihun Park       최초 생성
  */
-public class SearchInsertPosition {
+public class BinarySearch {
+
 
     /**
-     * methodName : 35. Search Insert Position [Easy]
+     * methodName : 704. Binary Search [Easy]
      * author : Jihun Park
-     * description : https://leetcode.com/problems/search-insert-position/
+     * description : https://leetcode.com/problems/binary-search/
      * @param nums
      * @param target
      * @return int
      */
-    public int searchInsert(int[] nums, int target) {
+    public int search(int[] nums, int target) {
 
         int start = 0;
         int end = nums.length-1;
-
         while(start <= end){
             int mid = start + (end-start)/2;
-            if(target == nums[mid]){
+            if(nums[mid] == target){
                 return mid;
-            }else if(target > nums[mid]){ // 같은 걸 찾기위해 줄여야함
+            }else if(nums[mid] < target){
                 start = mid+1;
             }else{
                 end = mid-1;
             }
         }
-        return start;
+        return -1;
+
     }
 
 }

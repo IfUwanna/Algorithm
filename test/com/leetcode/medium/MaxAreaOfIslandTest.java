@@ -1,8 +1,7 @@
 package com.leetcode.medium;
 
+import com.leetcode.bfs_dfs.MaxAreaOfIsland;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * packageName    : com.leetcode.medium

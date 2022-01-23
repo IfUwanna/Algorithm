@@ -1,6 +1,5 @@
 package com.leetcode.binarysearch;
 
-import com.leetcode.binarySearch.KokoEatingBananas;
 import org.junit.jupiter.api.Test;
 
 /**

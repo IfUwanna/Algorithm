@@ -1,4 +1,4 @@
-package com.leetcode.medium;
+package com.leetcode.bfs_dfs;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -19,7 +19,7 @@ public class MaxAreaOfIsland {
     private final int[][] DIRECTIONS = new int[][]{{-1,0},{0,1},{1,0},{0,-1}};  // 시계방향 좌표이동
 
     /**
-     * methodName : 695. Max Area of Island (DFS)
+     * methodName : 695. Max Area of Island (Medium]
      * author : Jihun Park
      * description : https://leetcode.com/problems/max-area-of-island
      * @param grid

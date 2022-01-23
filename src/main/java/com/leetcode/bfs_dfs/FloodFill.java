@@ -1,4 +1,4 @@
-package com.leetcode.easy;
+package com.leetcode.bfs_dfs;
 
 /**
  * packageName    : com.leetcode.easy
@@ -27,21 +27,15 @@ public class FloodFill {
      */
     public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {
 
-        if (image[sr][sc] != newColor) { // 같은 값이면 결과 변함없음. 실행하면 서로 계속 전파해서 SOF 발생
-            dfs(image, sr, sc, image[sr][sc], newColor);
-        }
+        dfs(image, sr, sc, image[sr][sc], newColor);
         return image;
     }
 
-    public void dfs(int[][] image, int sr, int sc, int color, int newColor){
-        if(sr >= 0 && sr < image.length  && sc >= 0 && sc < image[0].length ){
-            int currentColor = image[sr][sc];
-            if(currentColor == color){ // 현재 컬러가 전달받은 바꾸기 전 컬러와 같으면 새로운 컬러로 채워넣고 4방향 전파
-                image[sr][sc] = newColor;
-                for(int[] d : DIRECTIONS){ // 시계방향 전파
-                    dfs(image,sr+d[0],sc+d[1],color,newColor);
-                }
-            }
+    public void dfs(int[][] image, int r, int c, int color, int newColor){
+        if( r < 0 || c < 0 || r >= image.length || c >= image[0].length || image[r][c] !=  color || image[r][c] ==  newColor) return;
+        image[r][c] = newColor;
+        for(int[] d : DIRECTIONS){
+            dfs(image,r+d[0],c+d[1],color,newColor);
         }
     }
 }

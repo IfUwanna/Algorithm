@@ -1,8 +1,7 @@
 package com.leetcode.easy;
 
+import com.leetcode.bfs_dfs.FloodFill;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * packageName    : com.leetcode.easy
