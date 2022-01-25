@@ -425,62 +425,7 @@ public class Array {
         }
         return false;
     }
-    /** 941. Valid Mountain Array
-     * Given an array of integers arr, return true if and only if it is a valid mountain array.
-     Recall that arr is a mountain array if and only if:
-     arr.length >= 3
-     There exists some i with 0 < i < arr.length - 1 such that:
-     arr[0] < arr[1] < ... < arr[i - 1] < arr[i]
-     arr[i] > arr[i + 1] > ... > arr[arr.length - 1]
 
-     Example 1:
-     Input: arr = [2,1]
-     Output: false
-
-     Example 2:
-     Input: arr = [3,5,5]
-     Output: false
-
-     Example 3:
-     Input: arr = [0,3,2,1]
-     Output: true
-
-     Constraints:
-     1 <= arr.length <= 104
-     0 <= arr[i] <= 104
-
-     https://leetcode.com/problems/valid-mountain-array/
-     * @return
-     */
-    public boolean validMountainArray (int[] arr) {
-
-        if (arr == null || arr.length < 3) {
-            return false;
-        }
-        boolean isAsc = true;    //상승여부
-        for (int i = 1; i < arr.length; i++) {
-            if (isAsc) {
-                if (arr[i - 1] > arr[i]) {
-                    if (i == 1) { // 처음부터 하강이면 탈락
-                        return false;
-                    } else {
-                        isAsc = false; // 하강 전환
-                    }
-                } else if (arr[i - 1] == arr[i]) { // 상승때 같은 경우 false
-                    return false;
-                }
-            } else { //하강
-                if (arr[i - 1] <= arr[i]) { // 하강시 뒷숫자가 크거나 같으면 false
-                    return false;
-                }
-            }
-        }
-        if (isAsc) {  //하강없이 끝나면 산이 아니니 false
-            return false;
-        } else {
-            return true;
-        }
-    }
     /**
      * 1299. Replace Elements with Greatest Element on Right Side
     Given an array arr, replace every element in that array with the greatest element among the elements to its right, and replace the last element with -1.

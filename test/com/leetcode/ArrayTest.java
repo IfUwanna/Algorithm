@@ -54,20 +54,13 @@ class ArrayTest {
         array.merge(new int[]{0},0,new int[]{1},1);
     }
 
-    @Test
-    void removeDuplicates() {
 
-    }
 
     @Test
     void testRemoveDuplicates() {
         array.removeDuplicates(new int[]{1,1,2});
     }
 
-    @Test
-    void validMountainArray() {
-        array.validMountainArray(new int[]{0,1,2,3,4,5,6,7,8,9});
-    }
 
     @Test
     void testRemoveDuplicates1() {
