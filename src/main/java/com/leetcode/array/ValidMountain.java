@@ -22,7 +22,7 @@ public class ValidMountain {
      */
     public boolean validMountainArray (int[] arr) {
 
-        if (arr == null || arr.length < 3) {
+        if (arr == null || arr.length < 3) { // edge case
             return false;
         }
         boolean isAsc = true;    //상승여부
@@ -43,10 +43,6 @@ public class ValidMountain {
                 }
             }
         }
-        if (isAsc) {  //하강없이 끝나면 산이 아니니 false
-            return false;
-        } else {
-            return true;
-        }
+        return isAsc? false: true; //하강없이 끝나면 산이 아니니 false 아니면 true;
     }
 }

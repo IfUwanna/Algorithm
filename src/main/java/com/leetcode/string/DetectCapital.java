@@ -38,9 +38,5 @@ public class DetectCapital {
     public boolean detectCapitalUse2(String word) {
         //2. Regex - 정규
         return word.matches("[A-Z]*|.[a-z]*");
-        /*
-        Time complexity: Basically O(n)O(n), but depends on implementation.
-Space complexity : O(1)O(1). We only need constant spaces to store our pattern.
-        * */
     }
 }
