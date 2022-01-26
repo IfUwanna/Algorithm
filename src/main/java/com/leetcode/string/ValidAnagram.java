@@ -12,6 +12,14 @@ package com.leetcode.string;
  * 2022/01/25        Jihun Park       최초 생성
  */
 public class ValidAnagram {
+    /**
+     * methodName : 242. Valid Anagram [Easy]
+     * author : Jihun Park
+     * description : https://leetcode.com/problems/valid-anagram/
+     * @param s
+     * @param t
+     * @return boolean
+     */
     public boolean isAnagram(String s, String t) {
         if(s.length()!=t.length())return false;
         int[] map = new int[26];

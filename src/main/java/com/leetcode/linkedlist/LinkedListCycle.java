@@ -17,6 +17,13 @@ import java.util.Set;
  * 2022/01/25        Jihun Park       최초 생성
  */
 public class LinkedListCycle {
+    /**
+     * methodName : 141. Linked List Cycle [Easy]
+     * author : Jihun Park
+     * description : https://leetcode.com/problems/linked-list-cycle/
+     * @param head
+     * @return boolean
+     */
     public boolean hasCycle(ListNode head) {
 
         // 1. Two Pointers

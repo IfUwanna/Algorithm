@@ -1,4 +1,4 @@
-package com.leetcode.easy;
+package com.leetcode.linkedlist;
 
 import com.leetcode.core.ListNode;
 
@@ -15,7 +15,7 @@ import com.leetcode.core.ListNode;
  */
 public class MergeTwoSortedLists {
     /**
-     * methodName : 21. Merge Two Sorted Lists
+     * methodName : 21. Merge Two Sorted Lists [Easy]
      * author : Jihun Park
      * description : https://leetcode.com/problems/merge-two-sorted-lists/
      * Linked List / Recursion
