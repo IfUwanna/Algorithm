@@ -15,7 +15,7 @@ import com.leetcode.core.ListNode;
  */
 public class ReverseLinkedList {
     /**
-     * methodName : 206. Reverse Linked List
+     * methodName : 206. Reverse Linked List [Easy]
      * author : Jihun Park
      * description : https://leetcode.com/problems/reverse-linked-list/
      * LinkedList / Recursion
