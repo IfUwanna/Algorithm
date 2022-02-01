@@ -1,9 +1,8 @@
-package com.leetcode.easy;
+package com.leetcode.string;
 
-import com.leetcode.easy.PalindromeNumber;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * packageName    : com.leetcode.challenge.easy
