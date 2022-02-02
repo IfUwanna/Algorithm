@@ -29,15 +29,15 @@ public class Combinations {
         return result;
     }
 
-    public  void backTracking(List<List<Integer>> result, List<Integer> comb, int start, int n, int level) {
-        if (level == 0) { //ending case
+    public  void backTracking(List<List<Integer>> result, List<Integer> comb, int start, int n, int k) {
+        if (k == 0) { //ending case
             result.add(new ArrayList<Integer>(comb));
             return;
         }
         
-        for (int i = start; i <= n-level+1; i++) {
+        for (int i = start; i <= n-k+1; i++) {
             comb.add(i);
-            backTracking(result, comb, i+1, n, level-1);
+            backTracking(result, comb, i+1, n, k-1);
             comb.remove(comb.size() - 1); 
         }
     }
