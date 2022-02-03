@@ -1,9 +1,9 @@
-package com.leetcode.slidingwindows;
+package com.leetcode.slidingwindow;
 
 import java.util.Arrays;
 
 /**
- * packageName    : com.leetcode.medium
+ * packageName    : com.leetcode.slidingwindow
  * fileName       : LongestSubstringWithoutRepeatingCharacters
  * author         : Jihun Park
  * date           : 2022/01/10

@@ -1,12 +1,10 @@
-package com.leetcode.backtracking;
+package com.leetcode.slidingwindow;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 /**
- * packageName    : com.leetcode.backtracking
- * fileName       : CombinationsTest
+ * packageName    : com.leetcode.slidingwindow
+ * fileName       : FindAllAnagramsInStringTest
  * author         : Jihun Park
  * date           : 2022/02/02
  * description    :
@@ -15,10 +13,11 @@ import static org.junit.jupiter.api.Assertions.*;
  * -----------------------------------------------------------
  * 2022/02/02        Jihun Park       최초 생성
  */
-class CombinationsTest {
-    Combinations combinations = new Combinations();
+class FindAllAnagramsInStringTest {
+    FindAllAnagramsInString findAllAnagramsInString = new FindAllAnagramsInString();
+
     @Test
-    void combine() {
-        combinations.combine(10,2);
+    void findAnagrams2() {
+        findAllAnagramsInString.findAnagrams("cbaebabacd","abc");
     }
 }

@@ -1,12 +1,11 @@
 package com.leetcode.slidingwindow;
 
-import com.leetcode.slidingwindows.LongestSubstringWithoutRepeatingCharacters;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * packageName    : com.leetcode.medium
+ * packageName    : com.leetcode.slidingwindow
  * fileName       : LongestSubstringWithoutRepeatingCharactersTest
  * author         : Jihun Park
  * date           : 2022/01/11

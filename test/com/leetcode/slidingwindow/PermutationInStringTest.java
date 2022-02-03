@@ -1,6 +1,5 @@
 package com.leetcode.slidingwindow;
 
-import com.leetcode.slidingwindows.PermutationInString;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
