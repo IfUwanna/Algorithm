@@ -13,7 +13,7 @@ package com.leetcode.dp;
  */
 public class ClimbingStairs {
     /**
-     * methodName : 70. Climbing Stairs
+     * methodName : 70. Climbing Stairs [Easy]
      * author : Jihun Park
      * description : https://leetcode.com/problems/climbing-stairs/
      * @param n
