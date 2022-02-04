@@ -24,22 +24,21 @@ public class ContiguousArray {
      */
     public int findMaxLength(int[] nums) {
 
-        // 2. prefix Sum + Hash table
+        // 1. prefix Sum + Hash table
         int len = nums.length;
         int max = 0;
         int sum = 0;
-        Map<Integer,Integer> map = new HashMap<>(); // sum,index
+        Map<Integer,Integer> map = new HashMap<>(); // sum,index 누적 합계의 인덱스 저장.
         map.put(0,-1);
         for (int i = 0; i < len; i++) {
             sum += nums[i] == 0? -1 : 1;
             if(!map.containsKey(sum)){
                 map.put(sum,i);
             }else{
-
+                max = Math.max(max,i- map.get(sum)); // 이미 저장된 합과 같아지는 지점이 있다면 이미 저장된 합의 다음 값부터 현재까지의 값을 더한게 0이라는 뜻.
             }
         }
         return max;
-
     }
 
     public int findMaxLength2(int[] nums) {
