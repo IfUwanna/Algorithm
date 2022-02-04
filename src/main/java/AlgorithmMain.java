@@ -1,4 +1,4 @@
-import com.datastructure.Array;
+import com.study.Array;
 import com.programmers.SkillCheck;
 import com.programmers.SkillCheck2;
 import com.programmers.Sort;
