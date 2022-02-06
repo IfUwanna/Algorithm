@@ -15,6 +15,13 @@ import java.util.List;
  * 2022/01/21        Jihun Park       최초 생성
  */
 public class PascalsTriangle {
+    /**
+     * methodName : generate
+     * author : Jihun Park
+     * description :
+     * @param numRows
+     * @return list
+     */
     public List<List<Integer>> generate(int numRows) {
 
         List<List<Integer>> result = new ArrayList<List<Integer>>();
