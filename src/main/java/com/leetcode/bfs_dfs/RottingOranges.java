@@ -1,4 +1,4 @@
-package com.leetcode.medium;
+package com.leetcode.bfs_dfs;
 
 import java.util.LinkedList;
 import java.util.Queue;

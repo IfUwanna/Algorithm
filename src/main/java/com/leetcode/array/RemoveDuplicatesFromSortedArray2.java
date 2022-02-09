@@ -21,6 +21,21 @@ public class RemoveDuplicatesFromSortedArray2 {
      */
     public int removeDuplicates(int[] nums) {
         int len = nums.length;
+        int idx = 0;
+        for(int num : nums){
+            if(idx < 2 || nums[idx-2] < num ){
+                nums[idx++] = num;
+            }
+        }
+/*        for(int i = 0; i < len; i++){
+            if(idx < 2 || nums[i] > nums[idx-2]){
+                nums[idx++] = nums[i];
+            }
+        }*/
+        return idx;
+    }
+    public int removeDuplicates2(int[] nums) {
+        int len = nums.length;
         if(len == 1){return 1;}
         int dupCnt = 0;
         int idx = 1;
