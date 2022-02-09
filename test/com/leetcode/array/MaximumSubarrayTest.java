@@ -1,9 +1,9 @@
 package com.leetcode.array;
 
+
 import org.junit.jupiter.api.Test;
 
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * packageName    : com.leetcode.easy

@@ -1,7 +1,8 @@
 package com.leetcode.array;
 
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 /**
  * packageName    : com.leetcode.easy
  * fileName       : TwoSumTest

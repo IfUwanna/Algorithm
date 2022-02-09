@@ -1,8 +1,8 @@
 package com.leetcode.medium;
 
-import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 /**
  * packageName    : com.leetcode.challenge.may

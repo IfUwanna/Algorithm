@@ -1,6 +1,5 @@
 package com.leetcode.bfs_dfs;
 
-import com.leetcode.bfs_dfs.MaxAreaOfIsland;
 import org.junit.jupiter.api.Test;
 
 /**

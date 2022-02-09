@@ -1,6 +1,6 @@
-package com.datastructure;
+package com.study;
 
-import com.study.Array;
+
 import org.junit.jupiter.api.Test;
 
 /**
