@@ -51,24 +51,4 @@ public class BinaryTreePreorderTraversal {
 
 
 
-
-
-    public List<Integer> preorderTraversal3(TreeNode root) {
-
-        // 2. bfs - iteration  level-order
-        List<Integer> list = new ArrayList<>();
-
-        if(root == null){return list;}
-        Queue<TreeNode> q = new LinkedList<>();
-        q.offer(root);
-        while(!q.isEmpty()){
-            TreeNode node = q.poll();
-            list.add(node.val);
-            if(node.left != null) q.offer(node.left);
-            if(node.right != null) q.offer(node.right);
-        }
-        return list;
-    }
-
-
 }
