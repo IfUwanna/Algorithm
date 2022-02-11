@@ -39,11 +39,24 @@ public class BinaryTreeInorderTraversal {
         List<Integer> list = new ArrayList<>();
         if(root == null){return list;}
         Stack<TreeNode> stack = new Stack<>();
+
+        // push self and all left
         pushAllLeft(root, stack);
+//        while(root != null){
+//            stack.push(root);
+//            root = root.left;
+//        }
+
         while (!stack.isEmpty()) {
             TreeNode cur = stack.pop();
             list.add(cur.val);
+            // push right and all right's left
             pushAllLeft(cur.right, stack);
+//            TreeNode right = cur.right;
+//            while(right != null){
+//                stack.push(right);
+//                right = right.left;
+//            }
         }
         return list;
     }

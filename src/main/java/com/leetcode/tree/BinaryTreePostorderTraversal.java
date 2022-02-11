@@ -30,7 +30,7 @@ public class BinaryTreePostorderTraversal {
         while(!stack.isEmpty()) {
             TreeNode curr = stack.pop();
             list.add(0,curr.val);
-            if(curr.left!=null) stack.push(curr.left);
+            if(curr.left!=null) stack.push(curr.left);  // 둘을 바꾸면 levelorder가 되는듯?
             if(curr.right!=null) stack.push(curr.right);
         }
         return list;
