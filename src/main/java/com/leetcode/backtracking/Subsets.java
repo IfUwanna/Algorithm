@@ -24,7 +24,6 @@ public class Subsets {
      */
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
-        //result.add(new ArrayList<>());
         for (int i = 1; i <= nums.length; i++) {
             backTracking(result,new ArrayList<>(),nums, i, 0);
         }
