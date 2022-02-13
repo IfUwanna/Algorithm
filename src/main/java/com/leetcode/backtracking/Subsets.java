@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class Subsets {
     /**
-     * methodName : 78. Subsets
+     * methodName : 78. Subsets [Medium]
      * author : Jihun Park
      * description : https://leetcode.com/problems/subsets/
      * @param nums
@@ -33,11 +33,10 @@ public class Subsets {
     }
 
     private void backTracking(List<List<Integer>> result, List<Integer> comb, int[] nums,  int len, int start){
-//        if(len == comb.size()){ // len : comb 자리수 기준 cur: 현재 담은 개수
-//            result.add(new ArrayList<>(comb));
-//            return;
-//        }
-        result.add(new ArrayList<>(comb));
+        if(len == comb.size()){ // len : comb 자리수 기준 cur: 현재 담은 개수
+            result.add(new ArrayList<>(comb));
+            return;
+        }
         for (int i = start; i < nums.length; i++) {
             comb.add(nums[i]);
             backTracking(result,comb, nums, len, i+1);
