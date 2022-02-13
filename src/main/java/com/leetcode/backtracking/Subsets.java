@@ -41,6 +41,5 @@ public class Subsets {
             backTracking(result,comb, nums, len, i+1);
             comb.remove(comb.size()-1);
         }
-
     }
 }
