@@ -14,6 +14,13 @@ import com.leetcode.core.TreeNode;
  * 2022/02/14        Jihun Park       최초 생성
  */
 public class ValidateBinarySearchTree {
+    /**
+     * methodName : 98. Validate Binary Search Tree [Medium]
+     * author : Jihun Park
+     * description : https://leetcode.com/problems/validate-binary-search-tree/
+     * @param root
+     * @return boolean
+     */
     public boolean isValidBST(TreeNode root) {
         //1. Recursion
         return isValidBST(root,null,null);

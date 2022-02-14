@@ -14,6 +14,14 @@ import com.leetcode.core.TreeNode;
  * 2022/02/14        Jihun Park       최초 생성
  */
 public class InsertIntoBinarySearchTree {
+    /**
+     * methodName : 701. Insert into a Binary Search Tree [Medium]
+     * author : Jihun Park
+     * description : https://leetcode.com/problems/insert-into-a-binary-search-tree/
+     * @param root
+     * @param val
+     * @return tree node
+     */
     public TreeNode insertIntoBST(TreeNode root, int val) {
 
         //1. Recursion
