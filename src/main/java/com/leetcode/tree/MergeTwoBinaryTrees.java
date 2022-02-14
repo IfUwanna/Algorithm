@@ -15,9 +15,9 @@ import com.leetcode.core.TreeNode;
  */
 public class MergeTwoBinaryTrees {
     /**
-     * methodName : mergeTrees
+     * methodName : 617. Merge Two Binary Trees [Easy]
      * author : Jihun Park
-     * description :
+     * description : https://leetcode.com/problems/merge-two-binary-trees/
      * @param t1
      * @param t2
      * @return tree node
@@ -37,6 +37,10 @@ public class MergeTwoBinaryTrees {
             // DFS 알고리즘과 유사하게 전위 순회(pre-order Traversal)로 진행. 재귀로 자식노드가 끝까지 가서  null이 나오면 재귀호출 스택을 쭉 타고 올라와서 루트까지 머지된 노드를 반환한다
             tree.left = mergeTrees(t1.left, t2.left);        // left
             tree.right = mergeTrees(t1.right, t2.right);     // right
+
+//            t1.val  = t1.val + t2.val;
+//            t1.left = mergeTrees(t1.left,t2.left);
+//            t1.right = mergeTrees(t1.right,t2.right);
             return tree;
         }
     }

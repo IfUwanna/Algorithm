@@ -16,7 +16,7 @@ public class FloodFill {
     private final int[][] DIRECTIONS = new int[][]{{-1,0},{0,1},{1,0},{0,-1}};
 
     /**
-     * methodName : 733.Flood Fill
+     * methodName : 733.Flood Fill [Easy]
      * author : Jihun Park
      * description : https://leetcode.com/problems/flood-fill/
      * @param image
