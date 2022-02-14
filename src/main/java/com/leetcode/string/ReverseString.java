@@ -17,7 +17,7 @@ public class ReverseString {
     /**
      * methodName : 344. Reverse String [Easy]
      * author : Jihun Park
-     * description :
+     * description : https://leetcode.com/problems/reverse-string/
      * @param s
      */
     public void reverseString(char[] s) {
@@ -29,10 +29,6 @@ public class ReverseString {
             s[start++] = s[end];
             s[end--] = temp;
         }
-
-//        String str = "hello";
-//        s =  str.toCharArray();
-//        return new String(s); String 일 경우
     }
 
 }

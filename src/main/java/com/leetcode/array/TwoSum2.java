@@ -1,5 +1,8 @@
 package com.leetcode.array;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * packageName    : com.leetcode.array
  * fileName       : TwoSum2
@@ -18,7 +21,7 @@ public class TwoSum2 {
      * description : https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
      * @param numbers
      * @param target
-     * @return int [ ]
+     * @return int[]
      */
     public int[] twoSum(int[] numbers, int target) {
 
@@ -53,5 +56,21 @@ public class TwoSum2 {
             }
         }
         return null;
+    }
+
+    public int[] twoSum3(int[] numbers, int target) {
+
+
+        //  2. using hashmap
+         int len = numbers.length;
+         Map<Integer,Integer> map = new HashMap<>();
+         for(int i = 0; i<len; i++){
+             if(map.containsKey(target-numbers[i])){
+                 return new int[]{map.get(target-numbers[i])+1,i+1};
+             }
+             map.put(numbers[i],i);
+         }
+         return new int[]{1,1};
+
     }
 }

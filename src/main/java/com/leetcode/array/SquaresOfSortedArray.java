@@ -41,13 +41,10 @@ public class SquaresOfSortedArray {
         int[] result = new int[len];
         while(start <= end){ //제곱은 절대값이니 양끝에 포인터를 두고 절대값이 큰 것 부터 새로운 배열 끝에서부터 채워넣음
             if(Math.abs(nums[start]) <=  Math.abs(nums[end])){
-                result[i] = nums[end]*nums[end];
-                end--;
+                result[i--] = nums[end]*nums[end--];
             }else{   // start가 더 큰 경우 end
-                result[i] = nums[start]*nums[start];
-                start++;
+                result[i--] = nums[start]*nums[start++];
             }
-            i--;
         }
         return result;
     }
