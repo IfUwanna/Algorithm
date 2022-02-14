@@ -1,4 +1,4 @@
-package com.leetcode.tree;
+package com.leetcode.tree.bst;
 
 import com.leetcode.core.TreeNode;
 
@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * packageName    : com.leetcode.tree
+ * packageName    : com.leetcode.tree.bst
  * fileName       : AllElementsInTwoBinarySearchTrees
  * author         : Jihun Park
  * date           : 2022/01/26
@@ -18,6 +18,16 @@ import java.util.Stack;
  * 2022/01/26        Jihun Park       최초 생성
  */
 public class AllElementsInTwoBinarySearchTrees {
+
+
+    /**
+     * methodName : 1305. All Elements in Two Binary Search Trees [Medium]
+     * author : Jihun Park
+     * description : https://leetcode.com/problems/all-elements-in-two-binary-search-trees/
+     * @param root1
+     * @param root2
+     * @return list
+     */
     public List<Integer> getAllElements(TreeNode root1, TreeNode root2) {
 
         List<Integer> sortedList1 = new ArrayList<>();

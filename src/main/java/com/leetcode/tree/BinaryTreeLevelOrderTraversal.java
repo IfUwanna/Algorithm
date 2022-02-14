@@ -8,6 +8,13 @@ import java.util.List;
 import java.util.Queue;
 
 public class BinaryTreeLevelOrderTraversal {
+    /**
+     * methodName : 102. Binary Tree Level Order Traversal [Medium]
+     * author : Jihun Park
+     * description : https://leetcode.com/problems/binary-tree-level-order-traversal/
+     * @param root
+     * @return list
+     */
     public List<List<Integer>> levelOrder(TreeNode root) {
         //1. Recursion(DFS)
         List<List<Integer>> result = new ArrayList<List<Integer>>();

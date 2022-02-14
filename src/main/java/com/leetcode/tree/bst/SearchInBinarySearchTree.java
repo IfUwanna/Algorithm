@@ -1,4 +1,4 @@
-package com.leetcode.tree;
+package com.leetcode.tree.bst;
 
 import com.leetcode.core.TreeNode;
 
@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * packageName    : com.leetcode.tree
+ * packageName    : com.leetcode.tree.bst
  * fileName       : SearchInBinarySearchTree
  * author         : Jihun Park
  * date           : 2022/02/14
