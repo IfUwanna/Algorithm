@@ -22,7 +22,7 @@ public class StringStudy {
      * description :
      * @param str
      */
-    public void stringToCharArray(java.lang.String str){
+    public void stringToCharArray(String str){
 
         // Creating array of string length
         char[] ch = new char[str.length()];
@@ -37,15 +37,25 @@ public class StringStudy {
         for (char c : ch) {
             System.out.println(c);
         }
-        // StringBuilder 마지막글자 자르기
-        //sb.setLength(sb.length()- 1)
 
+
+
+    }
+
+    public void initStringBuilder(){
         // StringBuilder, StringBuffer 초기화 방법 3가지
         StringBuilder sb = new StringBuilder();
 
         sb = new StringBuilder();   // 1. 새로운 인스턴스 생성
         sb.delete(0, sb.length());  // 2. delete() 이용
         sb.setLength(0);            // 3. setLength() 이용
+    }
 
+    public void deleteLastString(){
+
+        StringBuilder sb = new StringBuilder();
+
+        //StringBuilder 마지막글자 자르기
+        sb.setLength(sb.length()- 1);
     }
 }
