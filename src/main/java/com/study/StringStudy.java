@@ -58,4 +58,33 @@ public class StringStudy {
         //StringBuilder 마지막글자 자르기
         sb.setLength(sb.length()- 1);
     }
+
+    public void padZeros(){
+
+    }
+
+    public String padLeftZeros(String inputString, int length) {
+        if (inputString.length() >= length) {
+            return inputString;
+        }
+        StringBuilder sb = new StringBuilder();
+        while (sb.length() < length - inputString.length()) {
+            sb.append('0');
+        }
+        sb.append(inputString);
+
+        return sb.toString();
+
+        //2
+//        StringBuilder sb = new StringBuilder();
+//        for (int i = 0; i < length; i++) {
+//            sb.append(' ');
+//        }
+//
+//        return sb.substring(inputString.length()) + inputString;
+
+         //return String.format("%1$" + length + "s", inputString).replace(' ', '0');
+    }
+
+
 }
