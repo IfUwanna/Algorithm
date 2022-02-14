@@ -13,9 +13,9 @@ package com.leetcode.bitmanipulation;
  */
 public class PowerOfTwo {
     /**
-     * methodName : isPowerOfTwo
+     * methodName : 231. Power of Two [Easy]
      * author : Jihun Park
-     * description :
+     * description : https://leetcode.com/problems/power-of-two/
      * @param n
      * @return boolean
      */
