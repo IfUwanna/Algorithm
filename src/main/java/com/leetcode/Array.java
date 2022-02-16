@@ -18,35 +18,6 @@ import java.util.List;
 public class Array {
 
     /**
-     * 485.Max Consecutive One 1이 최대로 연속되는 숫자 찾기!
-    *
-    * Given a binary array nums, return the maximum number of consecutive 1's in the array.
-    * Input: nums = [1,1,0,1,1,1]
-    * Output: 3
-    *
-    * Input: nums = [1,0,1,1,0,1]
-    * Output: 2
-    * https://leetcode.com/problems/max-consecutive-ones/
-    *
-    * */
-    public int findMaxConsecutiveOnes(int[] nums) {
-
-        int maxCnt = 0;
-        int currentCnt = 0;
-
-        for(int i=0; i<nums.length; i++){
-            if(nums[i] == 1){
-                currentCnt++;
-            }else{
-                currentCnt = 0;
-            }
-            if(maxCnt < currentCnt){
-                maxCnt = currentCnt;
-            }
-        }
-        return maxCnt;
-    }
-    /**
      * 1295.Find Numbers with Even Number of Digits  짝수 자리 숫자 찾기!
     Given an array nums of integers, return how many of them contain an even number of digits.
 

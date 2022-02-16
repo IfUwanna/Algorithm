@@ -1,7 +1,8 @@
 package com.leetcode;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * packageName    : com.leetcode.Learn
@@ -17,11 +18,6 @@ import org.junit.jupiter.api.Test;
 class ArrayTest {
 
     Array array = new Array();
-
-    @Test
-    void findMaxConsecutiveOnes() {
-        assertEquals(3,array.findMaxConsecutiveOnes(new int[]{1,1,0,1,1,1}));
-    }
 
     @Test
     void testFindMaxConsecutiveOnes() {
