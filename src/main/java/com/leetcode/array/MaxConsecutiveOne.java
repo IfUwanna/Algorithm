@@ -22,19 +22,18 @@ public class MaxConsecutiveOne {
      */
     public int findMaxConsecutiveOnes(int[] nums) {
 
-        int maxCnt = 0;
-        int currentCnt = 0;
-
-        for(int i=0; i<nums.length; i++){
-            if(nums[i] == 1){
-                currentCnt++;
-            }else{
-                currentCnt = 0;
-            }
-            if(maxCnt < currentCnt){
-                maxCnt = currentCnt;
+        int len = nums.length;
+        int max = 0;
+        int sum = 0;
+        for(int i = 0; i < len; i++){
+            if(nums[i] != 0){
+                sum += nums[i];
+            }else{ // zero case
+                max = Math.max(sum,max);
+                sum = 0;
             }
         }
-        return maxCnt;
+        return Math.max(sum,max);
+
     }
 }
