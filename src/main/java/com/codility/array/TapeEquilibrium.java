@@ -12,6 +12,13 @@ package com.codility.array;
  * 2022/02/19        Jihun Park       최초 생성
  */
 public class TapeEquilibrium {
+    /**
+     * methodName : TapeEquilibrium
+     * author : Jihun Park
+     * description : https://app.codility.com/programmers/lessons/3-time_complexity/tape_equilibrium/
+     * @param A
+     * @return int
+     */
     public static int solution(int[] A) {
         int len = A.length;
         int result = Integer.MAX_VALUE;
