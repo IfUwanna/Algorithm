@@ -1,12 +1,8 @@
-package com.codility.test;
-
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
+package com.codility.array;
 
 /**
- * packageName    : com.codility.test
- * fileName       : WoowaBrothersTest
+ * packageName    : com.codility.array
+ * fileName       : TapeEquilibrium
  * author         : Jihun Park
  * date           : 2022/02/19
  * description    :
@@ -15,10 +11,6 @@ import static org.junit.jupiter.api.Assertions.*;
  * -----------------------------------------------------------
  * 2022/02/19        Jihun Park       최초 생성
  */
-class WoowaBrothersTest {
-    WoowaBrothers woowaBrothers = new WoowaBrothers();
-    @Test
-    void solution() {
+public class TapeEquilibrium {
 
-    }
 }
