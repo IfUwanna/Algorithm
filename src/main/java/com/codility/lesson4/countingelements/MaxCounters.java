@@ -14,6 +14,14 @@ import java.util.Arrays;
  * 2022/02/19        Jihun Park       최초 생성
  */
 public class MaxCounters {
+    /**
+     * methodName : MaxCounters [Medium]
+     * author : Jihun Park
+     * description : https://app.codility.com/programmers/lessons/4-counting_elements/max_counters/
+     * @param N
+     * @param A
+     * @return int [ ]
+     */
     public int[] solution(int N, int[] A) {
         int len = A.length;
 
