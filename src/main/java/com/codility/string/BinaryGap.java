@@ -1,4 +1,4 @@
-package com.codility;
+package com.codility.string;
 
 /**
  * packageName    : com.codility
