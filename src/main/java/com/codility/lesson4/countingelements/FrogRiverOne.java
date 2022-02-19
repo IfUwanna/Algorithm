@@ -1,7 +1,10 @@
-package com.codility.array;
+package com.codility.lesson4.countingelements;
+
+import java.util.HashSet;
+import java.util.Set;
 
 /**
- * packageName    : com.codility.array
+ * packageName    : com.codility.lesson4.countingelements
  * fileName       : FrogRiverOne
  * author         : Jihun Park
  * date           : 2022/02/19
@@ -22,20 +25,19 @@ public class FrogRiverOne {
      */
     public int solution(int X, int[] A) {
         int len = A.length;
-        int[] leaves = new int[X];
+        Set<Integer> set = new HashSet<>();
+        for (int i = 1; i <= X; i++) {
+            set.add(i);
+        }
+
         for(int i =0; i<len; i++){
-            leaves[A[i]] = 1;
-            if(isAll(A)) return i;
+            set.remove(A[i]);
+            if(set.isEmpty()){
+                return i;
+            }
         }
         return -1;
     }
 
-    private boolean isAll(int[] nums){
-        for(int num : nums){
-            if(num == 0){
-                return false;
-            }
-        }
-        return true;
-    }
+
 }

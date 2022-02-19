@@ -1,4 +1,4 @@
-package com.codility.array;
+package com.codility.lesson2.arrays;
 
 /**
  * packageName    : com.codility.array

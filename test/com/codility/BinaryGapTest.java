@@ -1,6 +1,6 @@
 package com.codility;
 
-import com.codility.string.BinaryGap;
+import com.codility.lesson1.iterations.BinaryGap;
 import org.junit.jupiter.api.Test;
 
 /**

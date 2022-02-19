@@ -1,4 +1,4 @@
-package com.codility.array;
+package com.codility.lesson3.timecomplexity;
 
 /**
  * packageName    : com.codility.array
@@ -13,7 +13,7 @@ package com.codility.array;
  */
 public class TapeEquilibrium {
     /**
-     * methodName : TapeEquilibrium
+     * methodName : TapeEquilibrium [Easy]
      * author : Jihun Park
      * description : https://app.codility.com/programmers/lessons/3-time_complexity/tape_equilibrium/
      * @param A

@@ -1,10 +1,8 @@
-package com.codility.array;
-
-import java.util.Arrays;
+package com.codility.lesson2.arrays;
 
 /**
  * packageName    : com.codility.array
- * fileName       : PermMissingElem
+ * fileName       : OddOccurrencesInArray
  * author         : Jihun Park
  * date           : 2022/02/19
  * description    :
@@ -13,23 +11,20 @@ import java.util.Arrays;
  * -----------------------------------------------------------
  * 2022/02/19        Jihun Park       최초 생성
  */
-public class PermMissingElem {
+public class OddOccurrencesInArray {
     /**
-     * methodName : PermMissingElem [Easy]
+     * methodName : OddOccurrencesInArray
      * author : Jihun Park
-     * description : https://app.codility.com/programmers/lessons/3-time_complexity/perm_missing_elem/
+     * description :https://app.codility.com/programmers/lessons/2-arrays/odd_occurrences_in_array/
      * @param A
      * @return int
      */
     public int solution(int[] A) {
-
+        //
         int len = A.length;
-        Arrays.sort(A);
-        for(int i = 0; i < len; i++){
-            if(A[i] != i+1){
-                return i+1;
-            }
+        for(int i=1; i < len; i++){
+            A[i] = A[i]^A[i-1];
         }
-        return len+1;
+        return A[len-1];
     }
 }

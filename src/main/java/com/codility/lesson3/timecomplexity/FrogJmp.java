@@ -1,4 +1,4 @@
-package com.codility;
+package com.codility.lesson3.timecomplexity;
 
 /**
  * packageName    : com.codility

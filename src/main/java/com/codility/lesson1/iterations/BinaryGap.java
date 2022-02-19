@@ -1,4 +1,4 @@
-package com.codility.string;
+package com.codility.lesson1.iterations;
 
 /**
  * packageName    : com.codility

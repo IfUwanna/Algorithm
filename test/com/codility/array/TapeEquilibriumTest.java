@@ -1,8 +1,7 @@
 package com.codility.array;
 
+import com.codility.lesson3.timecomplexity.TapeEquilibrium;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * packageName    : com.codility.array
