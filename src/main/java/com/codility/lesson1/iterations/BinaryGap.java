@@ -5,7 +5,7 @@ package com.codility.lesson1.iterations;
  * fileName       : BinaryGap
  * author         : Jihun Park
  * date           : 2022/02/11
- * description    :
+ * description    : https://app.codility.com/programmers/lessons/1-iterations/binary_gap/
  * ===========================================================
  * DATE              AUTHOR             NOTE
  * -----------------------------------------------------------
