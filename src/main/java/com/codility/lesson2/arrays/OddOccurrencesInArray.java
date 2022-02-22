@@ -20,7 +20,7 @@ public class OddOccurrencesInArray {
      * @return int
      */
     public int solution(int[] A) {
-        //
+
         int len = A.length;
         for(int i=1; i < len; i++){
             A[i] = A[i]^A[i-1];
