@@ -13,7 +13,7 @@ package com.codility.lesson3.timecomplexity;
  */
 public class FrogJmp {
     /**
-     * methodName : FrogJmp
+     * methodName : FrogJmp [Easy]
      * author : Jihun Park
      * description : https://app.codility.com/programmers/lessons/3-time_complexity/frog_jmp/
      * @param X
