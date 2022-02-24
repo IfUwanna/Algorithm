@@ -33,7 +33,6 @@ public class SortList {
             }
             cur = cur.next;
         }
-
         return dHead.next;
     }
 
