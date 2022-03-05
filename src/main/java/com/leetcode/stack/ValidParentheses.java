@@ -1,9 +1,9 @@
-package com.leetcode.string;
+package com.leetcode.stack;
 
 import java.util.Stack;
 
 /**
- * packageName    : com.leetcode.string
+ * packageName    : com.leetcode.stack
  * fileName       : ValidParentheses
  * author         : Jihun Park
  * date           : 2022/01/26

@@ -1,4 +1,4 @@
-package com.codility.test;
+package com.codility.t;
 
 import org.junit.jupiter.api.Test;
 

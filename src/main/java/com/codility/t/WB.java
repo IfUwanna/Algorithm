@@ -1,4 +1,4 @@
-package com.codility.test;
+package com.codility.t;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -138,6 +138,7 @@ public class WB {
         Arrays.sort(B);
         int i = 0;
         for (int k = 0; k < n; k++) {
+            //if (i < m - 1 && B[i] < A[k])
             while (i < m - 1 && B[i] < A[k])
                 i += 1;
             if (A[k] == B[i])
