@@ -20,28 +20,13 @@ public class ChampagneTower {
             for (int c = 0; c <= r; c++) {
                 if(tower[r][c] > 1){
                     double d = (tower[r][c]-1.0) / 2;
-                        tower[r+1][c] += d;
-                        tower[r+1][c+1] += d;
-
+                    tower[r+1][c] += d;
+                    tower[r+1][c+1] += d;
                 }
             }
         }
         return Math.min(1.0, tower[query_row][query_glass]);
     }
-    public double champagneTower2(int poured, int query_row, int query_glass) {
-        double[][] g = new double[1 + query_row][1 + query_row];
-        g[0][0] = poured;
-        for (int i = 0; i < query_row; i++){
-            for (int j = 0; j <= i; j++){
-                if (g[i][j] > 1){
-                    double p = (g[i][j] - 1.0) / 2;
-                    g[i + 1][j] += p;
-                    g[i + 1][j + 1] += p;
-                }
-            }
-        }
-        return Math.min(1.0, g[query_row][query_glass]);
 
-    }
 
 }

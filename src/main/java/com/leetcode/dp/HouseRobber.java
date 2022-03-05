@@ -15,7 +15,7 @@ public class HouseRobber {
     /**
      * methodName : 70. Climbing Stairs
      * author : Jihun Park
-     * description : https://leetcode.com/problems/climbing-stairs/
+     * description : https://leetcode.com/problems/house-robber/
      * @param nums
      * @return int
      */
