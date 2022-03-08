@@ -1,6 +1,8 @@
 package com.leetcode.medium;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import com.leetcode.array.ThreeSum;
 import org.junit.jupiter.api.Test;
 
 /**
