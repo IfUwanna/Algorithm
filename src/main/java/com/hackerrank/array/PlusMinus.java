@@ -8,7 +8,7 @@ import java.util.List;
  * fileName       : PlusMinus
  * author         : Jihun Park
  * date           : 2022/03/08
- * description    : https://www.hackerrank.com/challenges/one-week-preparation-kit-plus-minus/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=preparation-kits&playlist_slugs%5B%5D=one-week-preparation-kit&playlist_slugs%5B%5D=one-week-day-one
+ * description    : https://www.hackerrank.com/challenges/one-week-preparation-kit-plus-minus/problem?isFullScreen=true
  * ===========================================================
  * DATE              AUTHOR             NOTE
  * -----------------------------------------------------------
@@ -32,12 +32,11 @@ public class PlusMinus {
                 break;
             }
         }
-        System.out.format("%6f", (double)positive/(double)len);
+        System.out.format("%6f", (float)positive/(float)len);
         System.out.println();
-        System.out.format("%6f", (double)negative/(double)len);
+        System.out.format("%6f", (float)negative/(float)len);
         System.out.println();
-        System.out.format("%6f", (double)zero/(double)len);
+        System.out.format("%6f", (float)zero/(float)len);
         System.out.println();
-
     }
 }
