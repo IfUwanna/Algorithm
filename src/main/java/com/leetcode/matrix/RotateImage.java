@@ -20,7 +20,6 @@ public class RotateImage {
      * 4 5 6  => 4 5 6  => 8 5 2
      * 7 8 9     1 2 3     9 6 3
      */
-
     public void rotate(int[][] matrix) {
 
         int m = matrix.length;
