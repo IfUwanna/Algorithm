@@ -1,14 +1,14 @@
-package com.leetcode.array;
+package com.leetcode.dp;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * packageName    : com.leetcode.array
- * fileName       : PascalsTriangle
+ * fileName       : PascalsTriangle [Easy]
  * author         : Jihun Park
  * date           : 2022/01/21
- * description    :
+ * description    : https://leetcode.com/problems/pascals-triangle/
  * ===========================================================
  * DATE              AUTHOR             NOTE
  * -----------------------------------------------------------
