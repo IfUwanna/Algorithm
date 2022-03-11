@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * packageName    : com.leetcode.linkedlist
- * fileName       : 61. Rotate List
+ * fileName       : 61. Rotate List [Medium]
  * author         : Jihun Park
  * date           : 2022/03/11
  * description    : https://leetcode.com/problems/rotate-list/
