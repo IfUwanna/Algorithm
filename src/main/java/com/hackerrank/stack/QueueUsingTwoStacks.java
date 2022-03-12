@@ -5,10 +5,10 @@ import java.util.Stack;
 
 /**
  * packageName    : com.hackerrank.stack
- * fileName       : QueueUsingTwoStacks
+ * fileName       : Queue using Two Stacks [Medium]
  * author         : Jihun Park
  * date           : 2022/03/12
- * description    :
+ * description    : https://www.hackerrank.com/challenges/queue-using-two-stacks/problem
  * ===========================================================
  * DATE              AUTHOR             NOTE
  * -----------------------------------------------------------
