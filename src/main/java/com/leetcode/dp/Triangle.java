@@ -49,6 +49,7 @@ public class Triangle {
     }
 /*top down 하향식 */
     class Solution {
+
         public int minimumTotal(List<List<Integer>> triangle) {
             // corner case
             if(triangle == null || triangle.size() == 0) return 0;
