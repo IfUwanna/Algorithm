@@ -19,7 +19,7 @@ public class GridChallenge {
         // Write your code here
         String prev = "";
         for (int i = 0; i < grid.size(); i++) {
-            String sortStr= sort(grid.get(i));
+            String sortStr = sort(grid.get(i));
             if(i != 0){
                 for (int j = 0; j < sortStr.length(); j++) {
                     if(prev.charAt(j) > sortStr.charAt(j)){

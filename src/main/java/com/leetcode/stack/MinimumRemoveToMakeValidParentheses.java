@@ -23,7 +23,7 @@ public class MinimumRemoveToMakeValidParentheses {
                 sb.append(c);
                 validCnt--;
             }else if(Character.isLetter(c)){
-                sb.append(c);
+                sb.append(c);Lonely Integer
             }
         }
 
