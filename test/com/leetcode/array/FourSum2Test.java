@@ -1,6 +1,7 @@
 package com.leetcode.array;
 
 
+import com.leetcode.array.sum.FourSum2;
 import org.junit.jupiter.api.Test;
 
 /**

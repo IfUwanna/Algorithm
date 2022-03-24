@@ -1,10 +1,10 @@
-package com.leetcode.array;
+package com.leetcode.greedy;
 
 import java.util.Arrays;
 
 /**
  * packageName    : com.leetcode.array
- * fileName       : 881. Boats to Save People
+ * fileName       : 881. Boats to Save People [Medium]
  * author         : Jihun Park
  * date           : 2022/03/25
  * description    : https://leetcode.com/problems/boats-to-save-people/solution/

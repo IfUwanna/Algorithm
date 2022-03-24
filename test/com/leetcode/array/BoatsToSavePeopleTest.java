@@ -1,8 +1,7 @@
 package com.leetcode.array;
 
+import com.leetcode.greedy.BoatsToSavePeople;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * packageName    : com.leetcode.array
