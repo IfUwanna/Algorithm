@@ -3,11 +3,11 @@ package com.hackerrank.array;
 import java.util.List;
 
 /**
- * packageName    : com.hackerrank.array
+ * packageName    : com.hackerrank.array [Medium]
  * fileName       : TruckTour
  * author         : Jihun Park
  * date           : 2022/03/12
- * description    :
+ * description    : https://www.hackerrank.com/challenges/Truck-Tour/forum
  * ===========================================================
  * DATE              AUTHOR             NOTE
  * -----------------------------------------------------------
