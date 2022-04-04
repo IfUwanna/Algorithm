@@ -32,6 +32,7 @@ public class BinaryGap {
         for(int i =0; i<binary.length(); i++){
             if(binary.charAt(i) == '1'){
                 ans = Math.max(i-start-1,ans);
+                start = i;
             }
         }
         return ans;
