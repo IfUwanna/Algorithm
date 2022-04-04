@@ -1,4 +1,4 @@
-package com.leetcode.array;
+package com.leetcode.greedy;
 
 /**
  * packageName    : com.leetcode.array

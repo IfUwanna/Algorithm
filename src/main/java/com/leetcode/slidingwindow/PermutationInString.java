@@ -4,10 +4,10 @@ import java.util.Arrays;
 
 /**
  * packageName    : com.leetcode.slidingwindow
- * fileName       : PermutationInString
+ * fileName       : 567. Permutation in String[Medium]
  * author         : Jihun Park
  * date           : 2022/01/11
- * description    :
+ * description    : https://leetcode.com/problems/permutation-in-string/
  * ===========================================================
  * DATE              AUTHOR             NOTE
  * -----------------------------------------------------------
@@ -15,14 +15,6 @@ import java.util.Arrays;
  */
 public class PermutationInString {
 
-    /**
-     * methodName : 567. Permutation in String [Medium]
-     * author : Jihun Park
-     * description : https://leetcode.com/problems/permutation-in-string/submissions/
-     * @param s1
-     * @param s2
-     * @return boolean
-     */
     public boolean checkInclusion(String s1, String s2) {
 
         //1. sort 이용

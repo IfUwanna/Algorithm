@@ -4,25 +4,17 @@ import java.util.HashMap;
 
 /**
  * packageName    : com.leetcode.prefixSum
- * fileName       : SubarraySumEqualsK
+ * fileName       : 560. Subarray Sum Equals K [Medium]
  * author         : Jihun Park
  * date           : 2022/02/10
- * description    :
+ * description    : https://leetcode.com/problems/subarray-sum-equals-k/
  * ===========================================================
  * DATE              AUTHOR             NOTE
  * -----------------------------------------------------------
  * 2022/02/10        Jihun Park       최초 생성
  */
 public class SubarraySumEqualsK {
-    /**
-     * methodName : 560. Subarray Sum Equals K
-     * author : Jihun Park
-     * description : https://leetcode.com/problems/subarray-sum-equals-k/
-     * https://leetcode.com/problems/subarray-sum-equals-k/discuss/803317/Java-Solution-with-Detailed-Explanation
-     * @param nums
-     * @param k
-     * @return int
-     */
+
     public int subarraySum(int[] nums, int k) {
 
         // 1. prefixSum + hashmap

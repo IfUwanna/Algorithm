@@ -13,7 +13,7 @@ package com.leetcode.dp;
  */
 public class HouseRobber {
     /**
-     * methodName : 70. Climbing Stairs
+     * methodName : 198. House Robber
      * author : Jihun Park
      * description : https://leetcode.com/problems/house-robber/
      * @param nums
