@@ -34,6 +34,6 @@ class FindCorrespondingNodeOfCloneTreeTest {
         cloned.right.left = new TreeNode(6);
         cloned.right.right = new TreeNode(19);
 
-        findCorrespondingNodeOfCloneTree.getTargetCopy(original,cloned,target);
+        findCorrespondingNodeOfCloneTree.getTargetCopy2(original,cloned,target);
     }
 }
