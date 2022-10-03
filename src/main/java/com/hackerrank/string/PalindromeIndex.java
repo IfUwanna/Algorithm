@@ -22,6 +22,7 @@ public class PalindromeIndex {
             if(s.charAt(start) != s.charAt(end)){
                 break;
             }
+            start++; end--;
         }
         if(start >= end) return -1;
 

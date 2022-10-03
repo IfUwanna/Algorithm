@@ -1,6 +1,7 @@
 package hackerrank.string;
 
 import com.hackerrank.string.PalindromeIndex;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -20,6 +21,9 @@ class PalindromeIndexTest {
 
     @Test
     void palindromeIndex() {
-        PalindromeIndex.palindromeIndex("hgygsvlfwcwnswtuhmyaljkqlqjjqlqkjlaymhutwsnwcflvsgygh");
+        Assertions.assertEquals(3,PalindromeIndex.palindromeIndex("aaab"));
+        Assertions.assertEquals(0,PalindromeIndex.palindromeIndex("baa"));
+        Assertions.assertEquals(-1,PalindromeIndex.palindromeIndex("aaa"));
+
     }
 }
